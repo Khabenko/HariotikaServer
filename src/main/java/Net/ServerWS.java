@@ -1,9 +1,7 @@
 package Net;
 
-import Domain.Arena;
+import Domain.*;
 import Domain.Character;
-import Domain.GlobalUpdate;
-import Domain.PartOfBody;
 import com.google.gson.Gson;
 import db.Login;
 import db.Users;
@@ -22,9 +20,10 @@ public class ServerWS   {
     private static GlobalUpdate globalUpdate = new GlobalUpdate();
     private static Arena arena = new Arena();
 
-    Gson gson = new Gson();
-    Session session;
-    Login login;
+    private HariotikaMessage hariotikaMessage;
+    private Gson gson = new Gson();
+    private Session session;
+    private Login login;
 
 
     @OnOpen
@@ -40,7 +39,7 @@ public class ServerWS   {
 
     @OnMessage
     public void onMessage(String message) throws IOException, InterruptedException {
-       parsingMessage(message);
+       parsingHariotikaMessage(message);
 
     }
 
@@ -54,111 +53,142 @@ public class ServerWS   {
         this.session.getAsyncRemote().sendText(message);
     }
 
-    public String getComand(String message) {
-        String[] mass = message.split("#");
-        return mass[0];
-    }
 
 
-     public  void parsingMessage(String message) {
-         String[] comand = message.split("#");
-         System.out.println(message);
-         if (comand[0].equals("login")) {
-             verifyLogin(comand);
-         }
-         if (comand[0].equals("Battle"))
-         {
-             updateBattle(comand);
-         }
-         if (comand[0].equals("RegToBattle"))
-         {
-             // 0 - команда, 1- номер боя 2- имя персонажа,3 куда бьет, 4 - что защищяет
-             regToBattle(comand);
-         }
-         if (comand[0].equals("CancelRegBattle"))
-         {
-          cancelRegBattle(comand);
-         }
-     }
 
 
-       public void verifyLogin(String[] comand){
-             //  System.out.println("Сокеты: "+peers.size());
-               login = new Login(comand[1],comand[2]);
-               if (!comand[1].equals("null")){
-                   if (login.loginIsPresent() && login.checkPass(comand[2])) {
+       public void verifyLogin(HariotikaMessage message){
+                   login = new Login(message.getLogin(), message.getPassword());
+               if (!message.getLogin().equals("null")){
+                   if (login.loginIsPresent() && login.checkPass(message.getPassword())) {
                        sessionMap.put(login.getCharacter().getName(), session);
-
                        if (!characterMap.containsKey(login.getCharacter().getName())) {
                            characterMap.put(login.getCharacter().getName(), login.getCharacter());
-                           System.out.println("Обновил в мапу чаров");
-                           System.out.println(gson.toJson(characterMap.get(login.getCharacter().getName())));
-
+                           System.out.println("В игру зашол "+message.getLogin());
                        }
-
-                     //  sendMessage("login#1#" + gson.toJson(login.getCharacter())); //Код ошибки: 1 - отправка данных
-                       System.out.println(characterMap.get(login.getCharacter()));
-                       sendMessage("login#1#" + gson.toJson(characterMap.get(login.getCharacter().getName())));
-
-
+                       hariotikaMessage = new HariotikaMessage(Command.Login,WsCode.Success,characterMap.get(login.getCharacter().getName()));
+                       sendMessage(gson.toJson(hariotikaMessage));
                    }
-                   else
-                       sendMessage("login#2"); //Код ошибки 2 - Неверный логин и парольм
+                   else {
+                       hariotikaMessage = new HariotikaMessage(Command.Login,WsCode.Reject);
+                       sendMessage(gson.toJson(hariotikaMessage));
+                   }
                }
-               else if (comand[1].equals("null")) {
+               else if (message.getLogin().equals("null")) {
                    login.createNewUser();
                    sessionMap.put(login.getCharacter().getName(), session);
                    if (!characterMap.containsKey(login.getCharacter().getName()))
                    characterMap.put(login.getCharacter().getName(),login.getCharacter());
-                   sendMessage("login#"+login.getUser().getLogin()+"#"+gson.toJson(login.getCharacter()));
-                   sendMessage("login#1#"+gson.toJson(login.getCharacter()));
-
+                   hariotikaMessage = new HariotikaMessage(Command.Login,WsCode.New,login.getCharacter());
+                   System.out.println(hariotikaMessage);
+                   sendMessage(gson.toJson(hariotikaMessage));
                }
        }
-       public  void updateBattle(String[] comand ){
-           Long number = Long.valueOf(comand[1]);
-           String name = comand[2];
-           PartOfBody wereHit = PartOfBody.valueOf(comand[3]);
-           PartOfBody whatDef = PartOfBody.valueOf(comand[4]);
 
+       public  void updateBattle(HariotikaMessage message ){
+           Long number = Long.valueOf(message.getBattle().getNumber());
+           String name = message.getCharName();
+           PartOfBody wereHit = PartOfBody.valueOf(message.getHit());
+           PartOfBody whatDef = PartOfBody.valueOf(message.getDef());
            if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)){
-               //Мыпервый игрок
+               //Мы первый игрок
                arena.getBattleList().get(number).setPlayer1Hit(wereHit);
                arena.getBattleList().get(number).setPlayer1Def(whatDef);
                arena.getBattleList().get(number).setPlayer1IsReady(true);
-
            }
            else if (arena.getBattleList().get(Long.valueOf(number)).getPlayer2().getName().equals(name)) {
                arena.getBattleList().get(number).setPlayer2Hit(wereHit);
                arena.getBattleList().get(number).setPlayer2Def(whatDef);
                arena.getBattleList().get(number).setPlayer2IsReady(true);
               }
-
        }
 
-       public void regToBattle(String[] comand){
+        private void registrationToBattle(){
            arena.addToArena(login.getCharacter());
-           System.out.println("Зареган на батл");
-           sendMessage("RegisteredInBattle#true");
+           System.out.println("Registration on Battle");
+           hariotikaMessage = new HariotikaMessage(Command.Battle,WsCode.Success);
+           sendMessage(gson.toJson(hariotikaMessage));
 
-
+           //add Bot
            Character character = new Character();
            character.setName("Bot");
            character.setHP(20);
            character.setStrength(1);
            character.setLvl(1);
            characterMap.put(character.getName(), character);
-       //    arena.addToArena(character);
-
-
+           arena.addToArena(character);
        }
 
-    public void cancelRegBattle(String[] comand){
+        private void cancelRegistrationToBattle(){
         arena.cancelRegBattle(login.getCharacter());
+        hariotikaMessage = new HariotikaMessage(Command.Battle,WsCode.Success);
+        sendMessage(gson.toJson(hariotikaMessage));
         System.out.println("Рег на батл отменен");
-        sendMessage("RegisteredInBattle#false");
+
 
     }
+
+
+    private void parsingHariotikaMessage(String message){
+        try {
+            hariotikaMessage = gson.fromJson(message,HariotikaMessage.class);
+            switch (hariotikaMessage.getCommand()){
+                case Login: commandLoginCode(hariotikaMessage);
+                    break;
+                case Battle: commandBattleCode(hariotikaMessage);
+                    break;
+                default:
+                    System.out.println("Server sended "+message);
+                    break;
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+    private void commandLoginCode(HariotikaMessage message){
+
+        switch (message.getCode()){
+            case Success:
+                break;
+            case Reject:
+                break;
+            case New:
+                break;
+            case Authorithation:
+                verifyLogin(message);
+                break;
+            default:
+                System.out.println("Invalid WsCode "+message.getCode());
+                break;
+        }
+
+    }
+
+    private void commandBattleCode(HariotikaMessage message){
+
+        switch (message.getCode()){
+            case RegistrationToBattle:
+                registrationToBattle();
+                break;
+            case CancelRegistrationToBattle:
+                cancelRegistrationToBattle();
+                break;
+            case UpdateBattle:
+                updateBattle(message);
+                break;
+            default:
+                System.out.println("Invalid WsCode "+message.getCode());
+                break;
+        }
+
+    }
+
+
+
+
 
 
     public static GlobalUpdate getGlobalUpdate() {

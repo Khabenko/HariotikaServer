@@ -6,6 +6,10 @@ import Net.ServerWS;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -107,6 +111,13 @@ public class Login  {
         character.setStrength(5);
         character.setArmor(1);
         save(character);
+        File avatar = new File("WEB-INF\\classes\\avatars\\Default.png");
+        File newFile = new File("WEB-INF\\classes\\avatars\\"+character.getName()+".png");
+        try {
+            copy(avatar,newFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -118,5 +129,23 @@ public class Login  {
         this.character = character;
     }
 
+    public static void copy(File source, File dest) throws IOException {
+        System.out.println("++++++++++++++++++++++++++++++++++"+source.getAbsolutePath());
+        FileInputStream is = new FileInputStream(source);
+        try {
+            FileOutputStream os = new FileOutputStream(dest);
+            try {
+                byte[] buffer = new byte[4096];
+                int length;
+                while ((length = is.read(buffer)) > 0) {
+                    os.write(buffer, 0, length);
+                }
+            } finally {
+                os.close();
+            }
+        } finally {
+            is.close();
+        }
+    }
 
 }

@@ -1,6 +1,9 @@
 package Domain;
 
 
+import Net.Command;
+import Net.HariotikaMessage;
+import Net.WsCode;
 import com.google.gson.Gson;
 
 import java.io.Serializable;
@@ -15,6 +18,7 @@ public class Battle {
     long endBattleTime;
     long startBattleTime;
     String log = "";
+
     private Character player1;
     private Character player2;
 
@@ -42,7 +46,7 @@ public class Battle {
 
 
     public void fight(){
-
+        HariotikaMessage hariotikaMessage;
         Gson  gson = new Gson();
         System.out.println("Файт");
         if (!getPlayer1Hit().equals(getPlayer2Def()) && getPlayer1Hit()!= null)
@@ -57,15 +61,18 @@ public class Battle {
             log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit;
             System.out.println("HP Игрока 2 "+player2.getHP());
         }
-
+        System.out.println(gson.toJson(this));
     //    battle =this;
         if (isFinish())
             finished =true;
 
+            hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, this);
+
+
         if (player1.getName()!="Bot")
-        player1.sendMessage("Battle#"+gson.toJson(this));
+            player1.sendMessage(gson.toJson(hariotikaMessage));
         if (player2.getName()!="Bot")
-        player2.sendMessage("Battle#"+gson.toJson(this));
+            player2.sendMessage(gson.toJson(hariotikaMessage));
 
         player1IsReady =false;
         player2IsReady =false;
@@ -89,8 +96,16 @@ public class Battle {
 
     public void startfight() {
         System.out.println("Бой начался");
+        Gson gson = new Gson();
         while (!isFinish())
         {
+            HariotikaMessage hariotikaMessage = new HariotikaMessage(Command.Battle,WsCode.UpdateTimer);
+            hariotikaMessage.setTimer(timer);
+            if (player1.getName()!="Bot")
+                player1.sendMessage(gson.toJson(hariotikaMessage));
+            if (player2.getName()!="Bot")
+                player2.sendMessage(gson.toJson(hariotikaMessage));
+
 
             runTimer();
             fightWithBot();
@@ -220,8 +235,6 @@ public class Battle {
              player2IsReady = true;
              player2Hit = VALUES.get(RANDOM.nextInt(SIZE));
              player2Def = VALUES.get(RANDOM.nextInt(SIZE));
-
-
          }
 
     }
@@ -231,8 +244,9 @@ public class Battle {
          Date currentTime = new Date();
      //  player1.sendMessage("Timer#"+timer);
     //   player2.sendMessage("Timer#"+timer);
-       System.out.println("Timer#"+timer);
+      // System.out.println("Timer#"+timer);
        timer=endBattleTime-currentTime.getTime()/1000;
+
        if (new Date().getTime()/1000 >=endBattleTime) {
            List<PartOfBody> VALUES = new ArrayList<PartOfBody>();
            VALUES.add(PartOfBody.HEAD);
@@ -252,9 +266,7 @@ public class Battle {
 
            }
 
-        //   this.startBattleTime = new Date().getTime()/1000;
-        //   this.endBattleTime = startBattleTime+30;
-        //   this.timer = endBattleTime -startBattleTime;
+
        }
 
 

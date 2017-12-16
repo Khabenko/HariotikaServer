@@ -70,14 +70,14 @@ public class Character implements Comparable, Serializable {
     public Character(String name, String login) {
         this.name = name;
         this.login = login;
-
+/*
         try {
             System.out.println("Вычитываем аватарку "+name);
             this.avatar = ImageIO.read(new File("D:\\MyGame\\HariotikaServer\\src\\main\\resources\\avatars\\"+name+".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+*/
     }
 
     public Character() {
@@ -94,13 +94,13 @@ public class Character implements Comparable, Serializable {
 
     public void sendMessage(String message) {
         try {
-            getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
+            if(getSessionMap().get(this.getName()).isOpen())
+                getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
         }
         catch (Exception e)
         {
-
             if (getSessionMap().get(this.getName()).isOpen() ){
-                System.out.println("Ошибка");
+                System.out.println("Ошибка отправки сообщения");
             sendMessage(message);
         }
             else

@@ -32,25 +32,34 @@ public class Main {
     }
 
 
-    public static void main(String[] args) throws InterruptedException {
-        Date curentDate = new Date();
-        int timer =30;
-        long createDae = curentDate.getTime()/1000;
-        long endDate = createDae+30;
-
-        while (timer >0) {
-            curentDate = new Date();
-            Thread.sleep(1000);
-            System.out.println(endDate-curentDate.getTime()/1000);
-
+    public static void copy(File source, File dest) throws IOException {
+        FileInputStream is = new FileInputStream(source);
+        try {
+            FileOutputStream os = new FileOutputStream(dest);
+            try {
+                byte[] buffer = new byte[4096];
+                int length;
+                while ((length = is.read(buffer)) > 0) {
+                    os.write(buffer, 0, length);
+                }
+            } finally {
+                os.close();
+            }
+        } finally {
+            is.close();
         }
+    }
 
+    public static void main(String[] args) throws InterruptedException {
 
+        File avatar = new File("src\\main\\resources\\avatars\\Default.png");
+        File newFile = new File("src\\main\\resources\\avatars\\Player.png");
 
-
-
-
-
+        try {
+            copy(avatar,newFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 
