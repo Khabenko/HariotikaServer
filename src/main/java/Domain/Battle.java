@@ -49,6 +49,7 @@ public class Battle {
         HariotikaMessage hariotikaMessage;
         Gson  gson = new Gson();
         System.out.println("Файт");
+        log = null;
         if (!getPlayer1Hit().equals(getPlayer2Def()) && getPlayer1Hit()!= null)
         {
             player1.hit(player2);

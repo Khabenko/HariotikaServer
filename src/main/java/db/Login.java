@@ -111,8 +111,21 @@ public class Login  {
         character.setStrength(5);
         character.setArmor(1);
         save(character);
-        File avatar = new File("WEB-INF\\classes\\avatars\\Default.png");
-        File newFile = new File("WEB-INF\\classes\\avatars\\"+character.getName()+".png");
+
+
+
+
+        File file = new File("");
+        System.out.println("Абсолютный путь"+file.getAbsolutePath());
+        try {
+            System.out.println("Относительный путь"+file.getCanonicalPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        File avatar = new File("\\avatars\\Default.png");
+        File newFile = new File("\\avatars\\"+character.getName()+".png");
         try {
             copy(avatar,newFile);
         } catch (IOException e) {

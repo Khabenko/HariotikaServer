@@ -32,7 +32,8 @@ import java.net.URISyntaxException;
         ServletContext contex = getServletContext();
       //  System.out.println(contex.getResourcePaths("avatars/Maka.png"));
      //   System.out.println(contex.getContextPath());
-        String path = contex.getRealPath("WEB-INF\\classes\\avatars\\"+imageId+".png");
+       // String path = contex.getRealPath("WEB-INF\\classes\\avatars\\"+imageId+".png");
+        String path = "C:\\Avatars\\"+imageId+".png";
         System.out.println(path);
         File f = new File(path); // тестовая картинка 400*300 24 bit (400*300*3=360000)
         BufferedImage img = ImageIO.read(f);
