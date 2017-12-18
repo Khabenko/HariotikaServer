@@ -113,19 +113,8 @@ public class Login  {
         save(character);
 
 
-
-
-        File file = new File("");
-        System.out.println("Абсолютный путь"+file.getAbsolutePath());
-        try {
-            System.out.println("Относительный путь"+file.getCanonicalPath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        File avatar = new File("\\avatars\\Default.png");
-        File newFile = new File("\\avatars\\"+character.getName()+".png");
+        File avatar = new File("C:\\Avatars\\Default.png");
+        File newFile = new File("C:\\Avatars\\"+character.getName()+".png");
         try {
             copy(avatar,newFile);
         } catch (IOException e) {
