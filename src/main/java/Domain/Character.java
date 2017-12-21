@@ -94,13 +94,18 @@ public class Character implements Comparable, Serializable {
 
     public void sendMessage(String message) {
         try {
-            if(getSessionMap().get(this.getName()).isOpen())
-                getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
+            synchronized (getSessionMap().get(this.getName())) {
+                if (getSessionMap().get(this.getName()).isOpen()) {
+                    System.out.println("Игроку " + getName() + " отправленно " + message);
+                    getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
+                }
+            }
         }
         catch (Exception e)
         {
             if (getSessionMap().get(this.getName()).isOpen() ){
-                System.out.println("Ошибка отправки сообщения");
+                System.out.println("Ошибка отправки сообщения ироку " + name);
+                e.printStackTrace();
             sendMessage(message);
         }
             else

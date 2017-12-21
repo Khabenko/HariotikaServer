@@ -30,6 +30,7 @@ public class ServerWS   {
     public void onOpen(Session peer) throws IOException, InterruptedException {
         System.out.println("Open Connection ..." + peer);
         session = peer;
+
     }
 
     @OnClose
@@ -51,6 +52,7 @@ public class ServerWS   {
 
     public void sendMessage(String message) {
         this.session.getAsyncRemote().sendText(message);
+
     }
 
 
@@ -90,6 +92,8 @@ public class ServerWS   {
            String name = message.getCharName();
            PartOfBody wereHit = PartOfBody.valueOf(message.getHit());
            PartOfBody whatDef = PartOfBody.valueOf(message.getDef());
+           try {
+
            if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)){
                //Мы первый игрок
                arena.getBattleList().get(number).setPlayer1Hit(wereHit);
@@ -101,6 +105,10 @@ public class ServerWS   {
                arena.getBattleList().get(number).setPlayer2Def(whatDef);
                arena.getBattleList().get(number).setPlayer2IsReady(true);
               }
+           }
+           catch (Exception e){
+
+           }
        }
 
         private void registrationToBattle(){

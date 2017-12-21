@@ -104,8 +104,9 @@ public class Arena extends Thread {
                    }
                };
                thread.start();
+               System.out.println();
                hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, battle);
-
+               System.out.println(hariotikaMessage);
 
                if (player1.getName()!="Bot")
                player1.sendMessage(gson.toJson(hariotikaMessage));

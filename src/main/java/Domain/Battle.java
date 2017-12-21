@@ -49,7 +49,7 @@ public class Battle {
         HariotikaMessage hariotikaMessage;
         Gson  gson = new Gson();
         System.out.println("Файт");
-        log = null;
+        log = "";
         if (!getPlayer1Hit().equals(getPlayer2Def()) && getPlayer1Hit()!= null)
         {
             player1.hit(player2);
@@ -63,7 +63,7 @@ public class Battle {
             System.out.println("HP Игрока 2 "+player2.getHP());
         }
         System.out.println(gson.toJson(this));
-    //    battle =this;
+
         if (isFinish())
             finished =true;
 
