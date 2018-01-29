@@ -222,7 +222,9 @@ public class Battle {
 
         List<PartOfBody> VALUES = new ArrayList<PartOfBody>();
         VALUES.add(PartOfBody.HEAD);
-        VALUES.add(PartOfBody.BODY);
+        VALUES.add(PartOfBody.NECK);
+        VALUES.add(PartOfBody.CHEST);
+        VALUES.add(PartOfBody.BELLY);
         VALUES.add(PartOfBody.LEGS);
         int SIZE = VALUES.size();
          Random RANDOM = new Random();
@@ -251,7 +253,9 @@ public class Battle {
        if (new Date().getTime()/1000 >=endBattleTime) {
            List<PartOfBody> VALUES = new ArrayList<PartOfBody>();
            VALUES.add(PartOfBody.HEAD);
-           VALUES.add(PartOfBody.BODY);
+           VALUES.add(PartOfBody.NECK);
+           VALUES.add(PartOfBody.CHEST);
+           VALUES.add(PartOfBody.BELLY);
            VALUES.add(PartOfBody.LEGS);
            int SIZE = VALUES.size();
            Random RANDOM = new Random();

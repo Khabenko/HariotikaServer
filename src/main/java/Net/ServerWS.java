@@ -5,6 +5,7 @@ import Domain.Character;
 import com.google.gson.Gson;
 import db.Login;
 import db.Users;
+import org.slf4j.*;
 
 import java.io.IOException;
 import java.util.*;
@@ -14,6 +15,8 @@ import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/")
 public class ServerWS   {
+
+
 
     private static Map<String,Session> sessionMap = Collections.synchronizedMap(new HashMap<String, Session>());
     private static Map<String,Character> characterMap = Collections.synchronizedMap(new HashMap<String, Character>());
@@ -51,8 +54,10 @@ public class ServerWS   {
 
 
     public void sendMessage(String message) {
-        this.session.getAsyncRemote().sendText(message);
-
+        synchronized (session) {
+            session.getMessageHandlers().clear();
+            this.session.getAsyncRemote().sendText(message);
+        }
     }
 
 

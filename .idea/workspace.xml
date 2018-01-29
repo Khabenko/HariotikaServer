@@ -8,27 +8,94 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/main/java/Net/Controller.java" description="import Domain.Arena;&#10;import com.google.gson.Gson;&#10;..." line="3" />
     <bookmark url="file://E:/QA Project/AutoTest/src/test/java/Test3.java" description="        /*&#10;       System.setProperty(&quot;webdriver.ge..." line="21" />
+    <bookmark url="file://E:/Java Project/Cashcoin/CubeLabel/src/main/java/bot/Algoritm2.java" description="    private BigDecimal balanceCurrenc = null;&#10;    ..." line="21" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5aaef2a-23cb-4bfe-843a-a0cfa682404f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Arena.class" afterPath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Arena.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Battle.class" afterPath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Battle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Character.class" afterPath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Character.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/Controller.class" afterPath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS$1.class" afterPath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS.class" afterPath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Domain/Arena.class" afterPath="$PROJECT_DIR$/target/classes/Domain/Arena.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Domain/Battle.class" afterPath="$PROJECT_DIR$/target/classes/Domain/Battle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Domain/Character.class" afterPath="$PROJECT_DIR$/target/classes/Domain/Character.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Net/Controller.class" afterPath="$PROJECT_DIR$/target/classes/Net/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Net/ServerWS$1.class" afterPath="$PROJECT_DIR$/target/classes/Net/ServerWS$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Net/ServerWS.class" afterPath="$PROJECT_DIR$/target/classes/Net/ServerWS.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/HariotikaServer_war_exploded/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/example/HelloWorld.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Arena$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Arena.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Battle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/GlobalUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/PartOfBody.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/Command.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/HariotikaMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/WsCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/PlayerClass/Warior.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Bot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Maka.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Player.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Player2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Player3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/HibernateUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/HibernateUtil2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/Users.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/hibernate.cfg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/gson-2.8.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-5.2.12.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.5.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/httpcore-4.4.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.0.3.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/persistence-api-1.0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Arena$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Arena.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Battle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/GlobalUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/PartOfBody.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/Command.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/HariotikaMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/ServerWS$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/ServerWS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/WsCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/PlayerClass/Warior.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Bot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Maka.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Player.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Player2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Player3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/HibernateUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/HibernateUtil2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/Users.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/646502b5-cb75-4c38-b68c-c31ad378afc8.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/646502b5-cb75-4c38-b68c-c31ad378afc8.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Arena.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Arena.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HariotikaServer.iml" afterPath="$PROJECT_DIR$/HariotikaServer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Battle.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Battle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Character.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Net/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/Net/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" afterPath="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,28 +137,6 @@
         <item name="public" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="Hariotika@localhost" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="Hariotika@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="Hariotika" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="Hariotika@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="Hariotika" type="e3449647:DbNodeDescriptor" />
-        <item name="public" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="Hariotika@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="Hariotika" type="e3449647:DbNodeDescriptor" />
-        <item name="public" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
     </expand>
     <select />
   </component>
@@ -100,77 +145,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Net/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+      <file leaf-file-name="character" pinned="false" current-in-tab="false">
+        <entry file="das://table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.character">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WsCode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Net/WsCode.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="395">
+              <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arena.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Arena.java">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Character.java">
+      <file leaf-file-name="equipment" pinned="false" current-in-tab="false">
+        <entry file="das://table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.equipment">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HibernateUtil2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/HibernateUtil2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/db/Login.java">
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
-              <caret line="139" column="44" lean-forward="false" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+            <state relative-caret-position="102">
+              <caret line="6" column="71" lean-forward="false" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerWS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Net/ServerWS.java">
+      <file leaf-file-name="HariotikaServer.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HariotikaServer.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2839">
-              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Battle.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Battle.java">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/646502b5-cb75-4c38-b68c-c31ad378afc8/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-              <folding>
-                <element signature="e#5540#5552#0" expanded="true" />
-                <element signature="e#6542#6554#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="character" pinned="false" current-in-tab="false">
+        <entry file="das://table:/5dbec675/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/Hariotika.public.character">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -184,38 +244,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="character" pinned="false" current-in-tab="false">
-        <entry file="das://table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.character">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
         <option value="hibernate-main-5.0" />
         <option value="hibernate-configuration-5.0" />
         <option value="hibernate-configuration-5.2" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -243,6 +284,7 @@
       <find>Создан БАТЛ</find>
       <find>Can't load avatar</find>
       <find>Ошибка отправки сообщения ироку</find>
+      <find>Body</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -297,8 +339,6 @@
         <option value="$PROJECT_DIR$/src/main/java/db/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/Domain/AvatarWindow.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/console.sql" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/1.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/Maka.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainServlet.java" />
@@ -310,12 +350,16 @@
         <option value="$PROJECT_DIR$/src/main/java/db/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Domain/Arena.java" />
         <option value="$PROJECT_DIR$/src/main/java/Net/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Domain/Character.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Domain/Battle.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Domain/Character.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Domain/Battle.java" />
+        <option value="$PROJECT_DIR$/target/site/dependencies.html" />
+        <option value="$PROJECT_DIR$/src/main/java/Domain/Arena.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/web.xml.fxml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -348,13 +392,39 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HariotikaServer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HariotikaServer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HariotikaServer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HariotikaServer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="clean" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HariotikaServer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="site" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="23" />
-    <option name="y" value="56" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-6" />
     <option name="width" value="1932" />
     <option name="height" value="1047" />
   </component>
@@ -379,9 +449,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -393,17 +460,6 @@
             <path>
               <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -417,69 +473,22 @@
               <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerClass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HariotikaServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HariotikaServer" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="HariotikaServer-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="tasks.servers" />
+    <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT.war" />
+    <property name="last_opened_file_path" value="E:/BOT/poloniex-api/poloniex-api-java-master" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27506015" />
@@ -494,6 +503,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGame\HariotikaServer\src\main\webapp" />
       <recent name="D:\MyGame\HariotikaServer\src\main\resources\avatars" />
       <recent name="D:\MyGame\HariotikaServer\src\main\java" />
       <recent name="D:\MyGame\HariotikaServer\src\main\java\Domain" />
@@ -820,6 +830,32 @@
       <workItem from="1513712270460" duration="6378000" />
       <workItem from="1513778622482" duration="5351000" />
       <workItem from="1513844197265" duration="191000" />
+      <workItem from="1513878674749" duration="671000" />
+      <workItem from="1513882536080" duration="4993000" />
+      <workItem from="1514108940135" duration="1496000" />
+      <workItem from="1514216664664" duration="597000" />
+      <workItem from="1514310143876" duration="2232000" />
+      <workItem from="1514400090522" duration="1295000" />
+      <workItem from="1514549503686" duration="625000" />
+      <workItem from="1514586672754" duration="594000" />
+      <workItem from="1514628373612" duration="2260000" />
+      <workItem from="1514669345215" duration="596000" />
+      <workItem from="1514706761517" duration="599000" />
+      <workItem from="1514819958288" duration="599000" />
+      <workItem from="1514916926376" duration="597000" />
+      <workItem from="1515004553974" duration="599000" />
+      <workItem from="1515086679273" duration="803000" />
+      <workItem from="1515438190231" duration="1264000" />
+      <workItem from="1515516925529" duration="597000" />
+      <workItem from="1515535577579" duration="191000" />
+      <workItem from="1515607086144" duration="614000" />
+      <workItem from="1515691716069" duration="589000" />
+      <workItem from="1515698056449" duration="597000" />
+      <workItem from="1515833952753" duration="1295000" />
+      <workItem from="1515932681388" duration="1654000" />
+      <workItem from="1516563550102" duration="224000" />
+      <workItem from="1517257640210" duration="1159000" />
+      <workItem from="1517258838584" duration="3757000" />
     </task>
     <task id="LOCAL-00001" summary="Add colum to Character">
       <created>1510769629724</created>
@@ -897,7 +933,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407936000" />
+    <option name="totallyTimeSpent" value="438433000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,31 +945,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-6" y="0" width="1932" height="1047" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5422222" sideWeight="0.5426439" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19402985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23450854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15138593" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15010683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21111111" sideWeight="0.49573562" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24242425" sideWeight="0.46801707" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52" sideWeight="0.45735607" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36588103" sideWeight="0.45735607" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30527496" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2249467" sideWeight="0.38777778" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23400854" sideWeight="0.6122222" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15491453" sideWeight="0.6122222" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2675906" sideWeight="0.17222223" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -944,7 +981,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24333334" sideWeight="0.46801707" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1030,7 +1066,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1039,18 +1075,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Obama.png" />
-    <entry file="file://$PROJECT_DIR$/target/classes/avatars/Maka.png" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.524/MainServlet.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.169/MainServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/MainServlet.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.394/MainServlet.java" />
     <entry file="file://$PROJECT_DIR$/image.jpg" />
     <entry file="file://$PROJECT_DIR$/image1.jpg" />
@@ -1070,13 +1094,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/CharacterEquipment.java" />
     <entry file="das://table:/5dbec675/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/Hariotika.public.characterequipment" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/646502b5-cb75-4c38-b68c-c31ad378afc8/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/646502b5-cb75-4c38-b68c-c31ad378afc8/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1104,13 +1121,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1180,19 +1190,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/HibernateUtil2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Net/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,33 +1202,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Net/HariotikaMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="120" column="29" lean-forward="false" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
-          <folding>
-            <element signature="e#2378#2379#0" expanded="false" />
-            <element signature="e#2412#2413#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/5dbec675/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/Hariotika.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/5dbec675/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/Hariotika.public.character">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1238,7 +1213,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml" />
+    <entry file="file://$PROJECT_DIR$/target/site/dependencies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Net/HariotikaMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="120" column="29" lean-forward="false" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
+          <folding>
+            <element signature="e#2378#2379#0" expanded="false" />
+            <element signature="e#2412#2413#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Battle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3621">
+          <caret line="257" column="40" lean-forward="false" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Net/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Net/ServerWS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,13 +1285,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Net/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Arena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="748">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="139" column="44" lean-forward="false" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/HibernateUtil2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5dbec675/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/Hariotika.public.character">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/646502b5-cb75-4c38-b68c-c31ad378afc8/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.equipment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1274,54 +1353,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HariotikaServer.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+          <caret line="6" column="71" lean-forward="false" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="139" column="44" lean-forward="false" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Net/ServerWS.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2839">
-          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+        <state relative-caret-position="395">
+          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Arena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Battle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="e#5540#5552#0" expanded="true" />
-            <element signature="e#6542#6554#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1331,7 +1394,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>HariotikaServer:war</last-edited>
+          <last-edited>HariotikaServer:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
