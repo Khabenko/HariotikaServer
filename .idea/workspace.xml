@@ -12,90 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5aaef2a-23cb-4bfe-843a-a0cfa682404f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/HariotikaServer_war_exploded/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/example/HelloWorld.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Arena$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Arena.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Battle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/GlobalUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Domain/PartOfBody.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/Command.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/HariotikaMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/ServerWS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/Net/WsCode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/PlayerClass/Warior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Bot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Maka.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Player.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Player2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/avatars/Player3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/HibernateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/HibernateUtil2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/db/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/classes/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/gson-2.8.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-5.2.12.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.5.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/httpcore-4.4.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.0.3.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/persistence-api-1.0.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.1.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HariotikaServer-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Arena$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Arena.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Battle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/GlobalUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Domain/PartOfBody.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/Command.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/HariotikaMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/ServerWS$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/ServerWS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Net/WsCode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/PlayerClass/Warior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Bot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Maka.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Player.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Player2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/avatars/Player3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/HibernateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/HibernateUtil2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/db/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/646502b5-cb75-4c38-b68c-c31ad378afc8.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/646502b5-cb75-4c38-b68c-c31ad378afc8.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HariotikaServer.iml" afterPath="$PROJECT_DIR$/HariotikaServer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Battle.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Battle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/PartOfBody.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" afterPath="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -157,8 +75,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="412">
+              <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -182,16 +100,6 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HibernateUtil2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/db/HibernateUtil2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -423,7 +331,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="width" value="1932" />
     <option name="height" value="1047" />
@@ -855,7 +763,7 @@
       <workItem from="1515932681388" duration="1654000" />
       <workItem from="1516563550102" duration="224000" />
       <workItem from="1517257640210" duration="1159000" />
-      <workItem from="1517258838584" duration="3757000" />
+      <workItem from="1517258838584" duration="4243000" />
     </task>
     <task id="LOCAL-00001" summary="Add colum to Character">
       <created>1510769629724</created>
@@ -933,7 +841,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438433000" />
+    <option name="totallyTimeSpent" value="438919000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,7 +853,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1932" height="1047" extended-state="1" />
+    <frame x="-6" y="0" width="1932" height="1047" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5422222" sideWeight="0.5426439" order="6" side_tool="true" content_ui="tabs" />
@@ -1115,7 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/site/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/avatars/Obama.png" />
     <entry file="das://table:/5dbec675/9a1f8418-8ea0-4af9-aaa1-f9d01bd4f467/Hariotika.public.equipment">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1380,10 +1287,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state relative-caret-position="412">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding />
         </state>
       </provider>
