@@ -75,13 +75,12 @@ public class Login  {
                 query = session.createQuery(hql);
                 List<Character> characters =  query.list();
                 character=characters.get(0);
+                System.out.println("++++++++++++++++++++++++++"+characters.get(0).getExpnextlvl());
                 return true;
             }
             else
                 return false;
-
         }
-
         return false;
     }
 
@@ -99,16 +98,14 @@ public class Login  {
         user.setPass("null");
         save(user);
         createNewChar();
-
-
     }
 
     public  void createNewChar(){
         character = new Character(user.getLogin(),user.getLogin());
         character.setLvl(1);
-        character.setHP(10);
+        character.setHP(60);
         character.setMaxHP(20);
-        character.setStrength(5);
+        character.setStrength(1);
         character.setArmor(1);
         save(character);
 

@@ -33,6 +33,7 @@ public class ServerWS   {
     public void onOpen(Session peer) throws IOException, InterruptedException {
         System.out.println("Open Connection ..." + peer);
         session = peer;
+        session.setMaxTextMessageBufferSize(10000);
 
     }
 
@@ -65,6 +66,7 @@ public class ServerWS   {
 
 
        public void verifyLogin(HariotikaMessage message){
+           
                    login = new Login(message.getLogin(), message.getPassword());
                if (!message.getLogin().equals("null")){
                    if (login.loginIsPresent() && login.checkPass(message.getPassword())) {
@@ -112,7 +114,7 @@ public class ServerWS   {
               }
            }
            catch (Exception e){
-
+               e.printStackTrace();
            }
        }
 

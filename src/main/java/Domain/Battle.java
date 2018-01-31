@@ -3,11 +3,15 @@ package Domain;
 
 import Net.Command;
 import Net.HariotikaMessage;
+import Net.ServerWS;
 import Net.WsCode;
 import com.google.gson.Gson;
+import db.UpdateDB;
 
 import java.io.Serializable;
 import java.util.*;
+
+import static Net.ServerWS.getCharacterMap;
 
 public class Battle {
 
@@ -18,6 +22,8 @@ public class Battle {
     long endBattleTime;
     long startBattleTime;
     String log = "";
+
+    Character winner;
 
     private Character player1;
     private Character player2;
@@ -64,8 +70,12 @@ public class Battle {
         }
         System.out.println(gson.toJson(this));
 
-        if (isFinish())
-            finished =true;
+        if (isFinish()) {
+            finished = true;
+            setEXP(player1);
+            setEXP(player2);
+
+        }
 
             hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, this);
 
@@ -89,8 +99,16 @@ public class Battle {
     }
 
     public boolean isFinish(){
-        if (player1.getHP()<=0 || player2.getHP()<=0)
+        if (player1.getHP()<=0 || player2.getHP()<=0) {
+           if (player1.getHP()<=0 && player2.getHP()<=0)
+            winner = null;
+        else if (player1.getHP()<=0)
+            winner = player2;
+        else if (player2.getHP()<=0)
+               winner = player1;
+
             return true;
+        }
         else return false;
     }
 
@@ -241,6 +259,21 @@ public class Battle {
          }
 
     }
+
+
+
+   public void setEXP(Character player){
+       int exp = 0;
+        if (winner.getName().equals(player.getName())) {
+            exp = player.getMaxHP()-player.getHP();
+        }
+        else {
+            exp = (player.getMaxHP()-player.getHP())/4;
+        }
+        player.setExperience(player.getExperience()+exp);
+        if (!player.getName().equals("Bot"))
+        UpdateDB.UpdateDB(player);
+   }
 
 
    public void runTimer(){

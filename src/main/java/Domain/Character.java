@@ -60,6 +60,8 @@ public class Character implements Comparable, Serializable {
     private int lvl;
     @Column(name = "experience")
     private int experience;
+    @Column(name = "expnextlvl")
+    private int expnextlvl;
 
 
 
@@ -241,6 +243,14 @@ public class Character implements Comparable, Serializable {
 
     public void setInBattle(boolean inBattle) {
         this.inBattle = inBattle;
+    }
+
+    public int getExpnextlvl() {
+        return expnextlvl;
+    }
+
+    public void setExpnextlvl(int expnextlvl) {
+        this.expnextlvl = expnextlvl;
     }
 
     public int compareTo(Object o) {
