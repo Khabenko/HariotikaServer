@@ -66,7 +66,7 @@ public class ServerWS   {
 
 
        public void verifyLogin(HariotikaMessage message){
-           
+
                    login = new Login(message.getLogin(), message.getPassword());
                if (!message.getLogin().equals("null")){
                    if (login.loginIsPresent() && login.checkPass(message.getPassword())) {
