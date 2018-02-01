@@ -12,6 +12,7 @@ import java.io.Serializable;
 import java.util.*;
 
 import static Net.ServerWS.getCharacterMap;
+import static db.UpdateDB.*;
 
 public class Battle {
 
@@ -263,7 +264,9 @@ public class Battle {
 
 
    public void setEXP(Character player){
-       int exp = 0;
+       int exp;
+       int lvl;
+
         if (winner.getName().equals(player.getName())) {
             exp = player.getMaxHP()-player.getHP();
         }
@@ -271,8 +274,19 @@ public class Battle {
             exp = (player.getMaxHP()-player.getHP())/4;
         }
         player.setExperience(player.getExperience()+exp);
+
+        if (player.getExperience() >= player.getExpnextlvl()){
+            exp = player.getExperience()-player.getExpnextlvl();
+            lvl = player.getLvl();
+            player.setExperience(exp);
+            player.setLvl(lvl+1);
+            player.setExpnextlvl(nextLevelEXP(player.getLvl()));
+        }
+
+
+
         if (!player.getName().equals("Bot"))
-        UpdateDB.UpdateDB(player);
+        UpdateDB(player);
    }
 
 

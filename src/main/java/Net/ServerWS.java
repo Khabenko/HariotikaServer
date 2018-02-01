@@ -62,9 +62,6 @@ public class ServerWS   {
     }
 
 
-
-
-
        public void verifyLogin(HariotikaMessage message){
 
                    login = new Login(message.getLogin(), message.getPassword());
@@ -129,7 +126,7 @@ public class ServerWS   {
            character.setName("Bot");
            character.setHP(20);
            character.setStrength(1);
-           character.setLvl(1);
+           character.setLvl(login.getCharacter().getLvl());
            characterMap.put(character.getName(), character);
            arena.addToArena(character);
        }
@@ -138,7 +135,7 @@ public class ServerWS   {
         arena.cancelRegBattle(login.getCharacter());
         hariotikaMessage = new HariotikaMessage(Command.Battle,WsCode.Success);
         sendMessage(gson.toJson(hariotikaMessage));
-        System.out.println("Рег на батл отменен");
+        System.out.println("Регистрация на батл отменена игорком "+login.getCharacter());
 
 
     }

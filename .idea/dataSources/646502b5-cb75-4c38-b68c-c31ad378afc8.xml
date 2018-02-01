@@ -13,8 +13,8 @@
     </database>
     <schema id="4" parent="3" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-01-31.22:34:08.261</IntrospectionTimestamp>
-      <IntrospectionStateNumber>877</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-02-02.00:09:26.635</IntrospectionTimestamp>
+      <IntrospectionStateNumber>922</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -171,7 +171,8 @@
     <column id="32" parent="10" name="maxhp">
       <Position>9</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>922</StateNumber>
+      <DefaultExpression>60</DefaultExpression>
     </column>
     <column id="33" parent="10" name="login">
       <Position>10</Position>
@@ -204,7 +205,8 @@
     <column id="38" parent="10" name="expnextlvl">
       <Position>15</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>877</StateNumber>
+      <StateNumber>921</StateNumber>
+      <DefaultExpression>100</DefaultExpression>
     </column>
     <index id="39" parent="10" name="character_id_uindex">
       <ObjectId>16429</ObjectId>

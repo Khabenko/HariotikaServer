@@ -41,14 +41,13 @@ public class Arena extends Thread {
             if(pair.getKey() == character.getLvl()){
                 if (!(pair.getValue().contains(character)) && !getCharacterMap().get(character.getName()).isInBattle()) {
                     System.out.println("Проверка, естьли в очереди чар "+character.getName()+" "+pair.getValue().contains(character));
-                    System.out.println(getCharacterMap().get(character.getName()).isInBattle());
-                    System.out.println(character.getName());
+                    System.out.println("Проверка, персонаж уже в бою "+getCharacterMap().get(character.getName()).isInBattle());
                     pair.getValue().offer(getCharacterMap().get(character.getName()));
                 }
                 else {
                     for (HashMap.Entry<Long, Battle> battleEntry : battleList.entrySet()) {
                         if (battleEntry.getValue().getPlayer1().getName().equals(character.getName()) || battleEntry.getValue().getPlayer2().getName().equals(character.getName())) {
-                            System.out.println("++++++++++++++++");
+                            System.out.println("++++++++Возвращяем сущетвующий батл игроку++++++++");
                             hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, battleEntry.getValue());
                             character.sendMessage(gson.toJson(hariotikaMessage));
                             break;
@@ -84,11 +83,15 @@ public class Arena extends Thread {
 
            if (pair.getValue().size()>1 && pair.getValue().size()%2==0 ){
 
-               System.out.println("----------Создан БАТЛ-------------");
+               System.out.println("----------Создан БАТЛ-------------LVL = "+pair.getKey());
+
+
                long number = new Date().getTime();
 
-               Character player1 = charQueue.get(1).poll();
-               Character player2 = charQueue.get(1).poll();
+               Character player1 = charQueue.get(pair.getKey()).poll();
+               System.out.println("Add to battle "+player1);
+               Character player2 = charQueue.get(pair.getKey()).poll();
+               System.out.println("Add to battle "+player2);
 
                final Battle battle = new Battle(number,player1,player2);
                player1.setInBattle(true);

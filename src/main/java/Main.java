@@ -18,6 +18,7 @@ import java.awt.image.DataBufferByte;
 import java.io.*;
 import java.util.Date;
 
+
 public class Main {
 
 
@@ -52,6 +53,12 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
+
+
+      //  nextLevelEXP(2);
+
+
+/*
         File avatar = new File("src\\main\\resources\\avatars\\Default.png");
         File newFile = new File("src\\main\\resources\\avatars\\Player.png");
 
@@ -61,7 +68,7 @@ public class Main {
             e.printStackTrace();
         }
 
-
+*/
 
 
 

@@ -75,7 +75,6 @@ public class Login  {
                 query = session.createQuery(hql);
                 List<Character> characters =  query.list();
                 character=characters.get(0);
-                System.out.println("++++++++++++++++++++++++++"+characters.get(0).getExpnextlvl());
                 return true;
             }
             else
