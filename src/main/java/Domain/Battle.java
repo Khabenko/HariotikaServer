@@ -50,7 +50,7 @@ public class Battle {
         this.player2 = player2;
         this.player1IsReady = false;
         this.player2IsReady =false;
-        this.partOfBodies = new ArrayList<>();
+        this.partOfBodies = new ArrayList();
 
         for (int i = 0; i <2 ; i++) {
             for (PartOfBody mass : PartOfBody.values()) {
