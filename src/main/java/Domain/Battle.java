@@ -23,6 +23,7 @@ public class Battle {
     long endBattleTime;
     long startBattleTime;
     String log = "";
+    ArrayList<PartOfBody> partOfBodies;
 
     Character winner;
 
@@ -49,26 +50,59 @@ public class Battle {
         this.player2 = player2;
         this.player1IsReady = false;
         this.player2IsReady =false;
+        this.partOfBodies = new ArrayList<>();
+
+        for (int i = 0; i <2 ; i++) {
+            for (PartOfBody mass : PartOfBody.values()) {
+                partOfBodies.add(mass);
+            }
+        }
+
+
     }
 
 
     public void fight(){
         HariotikaMessage hariotikaMessage;
         Gson  gson = new Gson();
+        int player1DefIndex = 0;
+        int player2DefIndex = 0;
         System.out.println("Файт");
         log = "";
-        if (!getPlayer1Hit().equals(getPlayer2Def()) && getPlayer1Hit()!= null)
+
+        System.out.println(partOfBodies.indexOf(getPlayer2Def()));
+        System.out.println("----DEFF-----"+partOfBodies.get(partOfBodies.indexOf(getPlayer2Def())+1));
+
+        if (getPlayer2Def()!= null){
+            player1DefIndex = partOfBodies.indexOf(getPlayer1Def());
+        }
+        if (getPlayer1Def()!=null){
+            player2DefIndex = partOfBodies.indexOf(getPlayer2Def());
+
+        }
+
+
+        if (getPlayer1Hit()!= null && !getPlayer1Hit().equals(partOfBodies.get(player2DefIndex)) && !getPlayer1Hit().equals(partOfBodies.get(player2DefIndex+1)) )
         {
+
             player1.hit(player2);
             log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+"  \n";
             System.out.println("HP Игрока 1 "+player1.getHP());
         }
-        if (!getPlayer2Hit().equals(getPlayer1Def())&& getPlayer2Hit()!= null)
+        else {
+            log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+" but was Block"+"  \n";
+        }
+
+
+        if (getPlayer2Hit()!= null && !getPlayer1Hit().equals(partOfBodies.get(player1DefIndex)) && !getPlayer1Hit().equals(partOfBodies.get(player1DefIndex+1)))
         {
             player2.hit(player1);
             log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit;
             System.out.println("HP Игрока 2 "+player2.getHP());
+        }else {
+            log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit+" but was Block";
         }
+
         System.out.println(gson.toJson(this));
 
         if (isFinish()) {
@@ -151,8 +185,8 @@ public class Battle {
 
         player1.setInBattle(false);
         player2.setInBattle(false);
-        System.out.println(player1.isInBattle());
-        System.out.println(player2.isInBattle());
+        System.out.println("В бою p1 "+player1.isInBattle());
+        System.out.println("В бою p2 "+player2.isInBattle());
         System.out.println("Бой закончен");
         finished =true;
         Arena.battleList.remove(number);
