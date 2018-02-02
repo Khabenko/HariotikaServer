@@ -89,9 +89,9 @@ public class Arena extends Thread {
                long number = new Date().getTime();
 
                Character player1 = charQueue.get(pair.getKey()).poll();
-               System.out.println("Add to battle "+player1);
+               System.out.println("Add to battle "+player1.getName());
                Character player2 = charQueue.get(pair.getKey()).poll();
-               System.out.println("Add to battle "+player2);
+               System.out.println("Add to battle "+player2.getName());
 
                final Battle battle = new Battle(number,player1,player2);
                player1.setInBattle(true);

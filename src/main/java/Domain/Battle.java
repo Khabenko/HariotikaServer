@@ -267,11 +267,15 @@ public class Battle {
        int exp;
        int lvl;
 
+       System.out.println("SetEXP Player "+player.getName());
+       System.out.println("SetEXP Winner "+winner.getName());
+
         if (winner.getName().equals(player.getName())) {
             exp = player.getMaxHP()-player.getHP();
         }
         else {
             exp = (player.getMaxHP()-player.getHP())/4;
+            player.setHP(0);
         }
         player.setExperience(player.getExperience()+exp);
 

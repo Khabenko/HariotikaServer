@@ -33,7 +33,9 @@ public class ServerWS   {
     public void onOpen(Session peer) throws IOException, InterruptedException {
         System.out.println("Open Connection ..." + peer);
         session = peer;
-        session.setMaxTextMessageBufferSize(10000);
+        session.setMaxTextMessageBufferSize(500000);
+        session.setMaxBinaryMessageBufferSize(500000);
+
 
     }
 
@@ -125,7 +127,7 @@ public class ServerWS   {
            Character character = new Character();
            character.setName("Bot");
            character.setHP(20);
-           character.setStrength(1);
+           character.setStrength(10);
            character.setLvl(login.getCharacter().getLvl());
            characterMap.put(character.getName(), character);
            arena.addToArena(character);

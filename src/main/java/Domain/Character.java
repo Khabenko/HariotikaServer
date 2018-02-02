@@ -98,6 +98,8 @@ public class Character implements Comparable, Serializable {
         try {
             synchronized (getSessionMap().get(this.getName())) {
                 if (getSessionMap().get(this.getName()).isOpen()) {
+                    getSessionMap().get(this.getName()).getMessageHandlers().clear();
+                    System.out.println(message);
                  //   System.out.println("Игроку " + getName() + " отправленно " + message);
                     getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
                 }
@@ -106,6 +108,12 @@ public class Character implements Comparable, Serializable {
         catch (Exception e)
         {
             if (getSessionMap().get(this.getName()).isOpen() ){
+                getSessionMap().get(this.getName()).getMessageHandlers().clear();
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e1) {
+            e1.printStackTrace();
+        }
                 System.out.println("Ошибка отправки сообщения ироку " + name);
                 e.printStackTrace();
             sendMessage(message);
