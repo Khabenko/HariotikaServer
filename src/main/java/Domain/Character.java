@@ -88,6 +88,7 @@ public class Character implements Comparable, Serializable {
 
     public void hit(Character enemy){
         System.out.println("Удар "+getName());
+
        // int perReductionPhyDamage = (100-(enemy.getArmor()/enemy.getLvl()))/100;
      //   System.out.println(perReductionPhyDamage);
       //  enemy.setHP(enemy.getHP()-(this.strength*perReductionPhyDamage));
@@ -95,13 +96,14 @@ public class Character implements Comparable, Serializable {
     }
 
     public void sendMessage(String message) {
+
         try {
             synchronized (getSessionMap().get(this.getName())) {
                 if (getSessionMap().get(this.getName()).isOpen()) {
                     getSessionMap().get(this.getName()).getMessageHandlers().clear();
-                    System.out.println(message);
                  //   System.out.println("Игроку " + getName() + " отправленно " + message);
-                    getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
+                   // getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
+                      getSessionMap().get(this.getName()).getBasicRemote().sendText(message);
                 }
             }
         }
@@ -109,14 +111,10 @@ public class Character implements Comparable, Serializable {
         {
             if (getSessionMap().get(this.getName()).isOpen() ){
                 getSessionMap().get(this.getName()).getMessageHandlers().clear();
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e1) {
-            e1.printStackTrace();
-        }
                 System.out.println("Ошибка отправки сообщения ироку " + name);
                 e.printStackTrace();
             sendMessage(message);
+
         }
             else
                e.printStackTrace();

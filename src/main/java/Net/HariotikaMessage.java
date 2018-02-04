@@ -1,9 +1,13 @@
 package Net;
 
 import Domain.Battle;
+import Domain.PartOfBody;
 import db.Login;
 import sun.security.util.Password;
 import Domain.Character;
+
+import java.util.ArrayList;
+
 public class HariotikaMessage {
 
     private Command command;
@@ -18,6 +22,8 @@ public class HariotikaMessage {
     private String def;
     private String charName;
     private long timer;
+
+    private ArrayList<PartOfBody> playerDefance;
 
 
     public HariotikaMessage() {
@@ -128,5 +134,13 @@ public class HariotikaMessage {
 
     public void setCharName(String charName) {
         this.charName = charName;
+    }
+
+    public ArrayList<PartOfBody> getPlayerDefance() {
+        return playerDefance;
+    }
+
+    public void setPlayerDefance(ArrayList<PartOfBody> playerDefance) {
+        this.playerDefance = playerDefance;
     }
 }

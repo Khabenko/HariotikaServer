@@ -23,15 +23,22 @@ public class Battle {
     long endBattleTime;
     long startBattleTime;
     String log = "";
-    ArrayList<PartOfBody> partOfBodies;
 
     Character winner;
 
     private Character player1;
     private Character player2;
 
+
+
     private boolean player1IsReady;
     private boolean player2IsReady;
+
+    private ArrayList<PartOfBody>  player1Defance;
+    private ArrayList<PartOfBody>  player2Defance;
+
+    private int player1Damaged;
+    private int player2Damaged;
 
     private PartOfBody player1Def;
     private PartOfBody player2Def;
@@ -50,14 +57,11 @@ public class Battle {
         this.player2 = player2;
         this.player1IsReady = false;
         this.player2IsReady =false;
-        this.partOfBodies = new ArrayList();
+        this.player1Damaged =0;
+        this.player2Damaged =0;
 
-        for (int i = 0; i <2 ; i++) {
-            for (PartOfBody mass : PartOfBody.values()) {
-                partOfBodies.add(mass);
-            }
-        }
-
+        this.player1Defance =  new ArrayList<PartOfBody>();
+        this.player2Defance = new ArrayList<PartOfBody>();
 
     }
 
@@ -65,40 +69,41 @@ public class Battle {
     public void fight(){
         HariotikaMessage hariotikaMessage;
         Gson  gson = new Gson();
-        int player1DefIndex = 0;
-        int player2DefIndex = 0;
-        System.out.println("Файт");
+
+        System.out.println("Fight");
         log = "";
 
-        System.out.println(partOfBodies.indexOf(getPlayer2Def()));
-        System.out.println("----DEFF-----"+partOfBodies.get(partOfBodies.indexOf(getPlayer2Def())+1));
 
-        if (getPlayer2Def()!= null){
-            player1DefIndex = partOfBodies.indexOf(getPlayer1Def());
-        }
-        if (getPlayer1Def()!=null){
-            player2DefIndex = partOfBodies.indexOf(getPlayer2Def());
-
-        }
-
-
-        if (getPlayer1Hit()!= null && !getPlayer1Hit().equals(partOfBodies.get(player2DefIndex)) && !getPlayer1Hit().equals(partOfBodies.get(player2DefIndex+1)) )
+        if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
         {
+            int hpBefore = player2.getHP();
 
             player1.hit(player2);
+
             log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+"  \n";
             System.out.println("HP Игрока 1 "+player1.getHP());
+
+            int hpAfter = player2.getHP();
+
+            player1Damaged += hpBefore-hpAfter;
+
         }
         else {
             log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+" but was Block"+"  \n";
         }
 
 
-        if (getPlayer2Hit()!= null && !getPlayer1Hit().equals(partOfBodies.get(player1DefIndex)) && !getPlayer1Hit().equals(partOfBodies.get(player1DefIndex+1)))
+        if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
         {
+            int hpBefore = player1.getHP();
+
             player2.hit(player1);
             log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit;
             System.out.println("HP Игрока 2 "+player2.getHP());
+
+            int hpAfter = player1.getHP();
+            player2Damaged += hpBefore-hpAfter;
+
         }else {
             log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit+" but was Block";
         }
@@ -107,8 +112,8 @@ public class Battle {
 
         if (isFinish()) {
             finished = true;
-            setEXP(player1);
-            setEXP(player2);
+            setEXP(player1, player1Damaged);
+            setEXP(player2, player2Damaged);
 
         }
 
@@ -268,8 +273,21 @@ public class Battle {
         this.number = number;
     }
 
+    public ArrayList<PartOfBody> getPlayer1Defance() {
+        return player1Defance;
+    }
 
+    public void setPlayer1Defance(ArrayList<PartOfBody> player1Defance) {
+        this.player1Defance = player1Defance;
+    }
 
+    public ArrayList<PartOfBody> getPlayer2Defance() {
+        return player2Defance;
+    }
+
+    public void setPlayer2Defance(ArrayList<PartOfBody> player2Defance) {
+        this.player2Defance = player2Defance;
+    }
 
     public void fightWithBot(){
 
@@ -297,19 +315,18 @@ public class Battle {
 
 
 
-   public void setEXP(Character player){
+   public void setEXP(Character player, int playerDamaged){
        int exp;
        int lvl;
 
-       System.out.println("SetEXP Player "+player.getName());
-       System.out.println("SetEXP Winner "+winner.getName());
 
-        if (winner.getName().equals(player.getName())) {
-            exp = player.getMaxHP()-player.getHP();
+        if(winner !=null && winner.getName().equals(player.getName())) {
+            exp = playerDamaged;
         }
         else {
-            exp = (player.getMaxHP()-player.getHP())/4;
             player.setHP(0);
+            exp = playerDamaged/4;
+
         }
         player.setExperience(player.getExperience()+exp);
 
@@ -320,7 +337,6 @@ public class Battle {
             player.setLvl(lvl+1);
             player.setExpnextlvl(nextLevelEXP(player.getLvl()));
         }
-
 
 
         if (!player.getName().equals("Bot"))
