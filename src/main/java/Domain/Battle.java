@@ -146,7 +146,6 @@ public class Battle {
             winner = player2;
         else if (player2.getHP()<=0)
                winner = player1;
-
             return true;
         }
         else return false;
@@ -297,18 +296,30 @@ public class Battle {
         VALUES.add(PartOfBody.CHEST);
         VALUES.add(PartOfBody.BELLY);
         VALUES.add(PartOfBody.LEGS);
-        int SIZE = VALUES.size();
+        VALUES.add(PartOfBody.HEAD);
+        int SIZE = VALUES.size()-1;
          Random RANDOM = new Random();
 
 
          if (player1.getName().equals("Bot")) {
+             player1Defance.clear();
              player1IsReady = true;
              player1Hit = VALUES.get(RANDOM.nextInt(SIZE));
-             player1Def = VALUES.get(RANDOM.nextInt(SIZE));
-         } else if (player2.getName().equals("Bot")){
+             int random = RANDOM.nextInt(SIZE);
+           //  player1Def = VALUES.get(RANDOM.nextInt(SIZE));
+             player1Defance.add(VALUES.get(random));
+             player1Defance.add(VALUES.get(random+1));
+         }
+         else if (player2.getName().equals("Bot")){
+             player2Defance.clear();
              player2IsReady = true;
              player2Hit = VALUES.get(RANDOM.nextInt(SIZE));
-             player2Def = VALUES.get(RANDOM.nextInt(SIZE));
+          //   player2Def = VALUES.get(RANDOM.nextInt(SIZE));
+
+             int random = RANDOM.nextInt(SIZE);
+             player2Defance.add(VALUES.get(random));
+             player2Defance.add(VALUES.get(random+1));
+
          }
 
     }

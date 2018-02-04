@@ -12,15 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5aaef2a-23cb-4bfe-843a-a0cfa682404f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/646502b5-cb75-4c38-b68c-c31ad378afc8.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/646502b5-cb75-4c38-b68c-c31ad378afc8.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HariotikaServer.iml" afterPath="$PROJECT_DIR$/HariotikaServer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Battle.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Battle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Character.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Net/HariotikaMessage.java" afterPath="$PROJECT_DIR$/src/main/java/Net/HariotikaMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" afterPath="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,19 +89,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Battle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
-              <caret line="350" column="44" lean-forward="false" selection-start-line="350" selection-start-column="44" selection-end-line="350" selection-end-column="44" />
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6820#6821#0" expanded="true" />
-                <element signature="e#6856#6857#0" expanded="true" />
-                <element signature="e#6912#6913#0" expanded="true" />
-                <element signature="e#6949#6950#0" expanded="true" />
-                <element signature="e#7024#7025#0" expanded="true" />
-                <element signature="e#7076#7077#0" expanded="true" />
-                <element signature="e#7132#7133#0" expanded="true" />
-                <element signature="e#7169#7170#0" expanded="true" />
-                <element signature="e#7244#7245#0" expanded="true" />
-                <element signature="e#7296#7297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,12 +106,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arena.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Arena.java">
+      <file leaf-file-name="UpdateDB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/UpdateDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,8 +121,18 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/db/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="176">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arena.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Arena.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -153,20 +148,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HariotikaServer.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HariotikaServer.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="64" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="1241">
               <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
               <folding />
             </state>
@@ -186,7 +171,7 @@
       <file leaf-file-name="ServerWS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Net/ServerWS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="1445">
               <caret line="101" column="79" lean-forward="false" selection-start-line="101" selection-start-column="79" selection-end-line="101" selection-end-column="79" />
               <folding />
             </state>
@@ -221,7 +206,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Users</find>
       <find>system</find>
       <find>--Арена создана---</find>
       <find>ses</find>
@@ -251,6 +235,7 @@
       <find>hit</find>
       <find>222222222</find>
       <find>exp</find>
+      <find>send</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -318,7 +303,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/646502b5-cb75-4c38-b68c-c31ad378afc8/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/db/table_lvl.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/UpdateDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/Domain/Arena.java" />
         <option value="src:table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.character" />
@@ -326,6 +310,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Net/HariotikaMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/Net/ServerWS.java" />
         <option value="$PROJECT_DIR$/src/main/java/Domain/Character.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/UpdateDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/Domain/Battle.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
       </list>
@@ -402,7 +387,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="y" value="2" />
     <option name="width" value="1932" />
@@ -430,6 +415,9 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -511,9 +499,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -965,7 +950,8 @@
       <workItem from="1517613571040" duration="1395000" />
       <workItem from="1517652013967" duration="2480000" />
       <workItem from="1517681839733" duration="9349000" />
-      <workItem from="1517732633811" duration="10613000" />
+      <workItem from="1517732633811" duration="12572000" />
+      <workItem from="1517762225439" duration="5788000" />
     </task>
     <task id="LOCAL-00001" summary="Add colum to Character">
       <created>1510769629724</created>
@@ -1043,7 +1029,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="495834000" />
+    <option name="totallyTimeSpent" value="503581000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1055,7 +1041,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="2" width="1932" height="1045" extended-state="1" />
+    <frame x="-6" y="2" width="1932" height="1045" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44994375" sideWeight="0.5448718" order="6" side_tool="true" content_ui="tabs" />
@@ -1076,11 +1063,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52755904" sideWeight="0.4551282" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3048369" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40269965" sideWeight="0.4551282" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2249467" sideWeight="0.38777778" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19017094" sideWeight="0.6122222" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25053418" sideWeight="0.6122222" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2675906" sideWeight="0.17222223" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1237,13 +1224,13 @@
     <entry file="file://$PROJECT_DIR$/target/site/index.html" />
     <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1425,16 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/UpdateDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/GlobalUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -1451,26 +1428,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HariotikaServer.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="64" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.character">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1492,7 +1454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Net/ServerWS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="1445">
           <caret line="101" column="79" lean-forward="false" selection-start-line="101" selection-start-column="79" selection-end-line="101" selection-end-column="79" />
           <folding />
         </state>
@@ -1500,7 +1462,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Arena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="476">
           <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
           <folding />
         </state>
@@ -1508,8 +1470,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Character.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="1241">
           <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5dbec675/646502b5-cb75-4c38-b68c-c31ad378afc8/Hariotika.public.character">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/UpdateDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1517,19 +1504,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Battle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
-          <caret line="350" column="44" lean-forward="false" selection-start-line="350" selection-start-column="44" selection-end-line="350" selection-end-column="44" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6820#6821#0" expanded="true" />
-            <element signature="e#6856#6857#0" expanded="true" />
-            <element signature="e#6912#6913#0" expanded="true" />
-            <element signature="e#6949#6950#0" expanded="true" />
-            <element signature="e#7024#7025#0" expanded="true" />
-            <element signature="e#7076#7077#0" expanded="true" />
-            <element signature="e#7132#7133#0" expanded="true" />
-            <element signature="e#7169#7170#0" expanded="true" />
-            <element signature="e#7244#7245#0" expanded="true" />
-            <element signature="e#7296#7297#0" expanded="true" />
           </folding>
         </state>
       </provider>
