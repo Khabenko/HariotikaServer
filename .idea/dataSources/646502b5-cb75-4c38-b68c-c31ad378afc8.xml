@@ -13,8 +13,8 @@
     </database>
     <schema id="4" parent="3" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-02-03.13:11:26.507</IntrospectionTimestamp>
-      <IntrospectionStateNumber>922</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-02-04.22:14:06.986</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1055</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -136,17 +136,20 @@
     <column id="25" parent="10" name="strength">
       <Position>2</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1051</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="26" parent="10" name="agility">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1052</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="27" parent="10" name="intuition">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1053</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="28" parent="10" name="intelligence">
       <Position>5</Position>
@@ -161,7 +164,8 @@
     <column id="30" parent="10" name="wisdom">
       <Position>7</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1054</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="31" parent="10" name="armor">
       <Position>8</Position>
@@ -200,7 +204,8 @@
     <column id="37" parent="10" name="hp">
       <Position>14</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1055</StateNumber>
+      <DefaultExpression>60</DefaultExpression>
     </column>
     <column id="38" parent="10" name="expnextlvl">
       <Position>15</Position>

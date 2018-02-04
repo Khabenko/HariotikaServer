@@ -130,8 +130,8 @@ public class ServerWS   {
            //add Bot
            Character character = new Character();
            character.setName("Bot");
-           character.setHP(character.getHP());
-           character.setStrength(character.getStrength());
+           character.setHP(20);
+           character.setStrength(5);
            character.setLvl(login.getCharacter().getLvl());
            characterMap.put(character.getName(), character);
            arena.addToArena(character);
