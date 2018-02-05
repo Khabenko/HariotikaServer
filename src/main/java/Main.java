@@ -17,6 +17,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.*;
 import java.util.Date;
+import java.util.Random;
 
 
 public class Main {
@@ -55,7 +56,11 @@ public class Main {
 
 
 
-      //  nextLevelEXP(2);
+        Random r = new Random();
+        int Low = 1;
+        int High = 101;
+        int Result = r.nextInt(High-Low) + Low;
+
 
 
 /*

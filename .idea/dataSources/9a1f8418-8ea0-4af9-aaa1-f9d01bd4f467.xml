@@ -16,8 +16,8 @@
     </database>
     <schema id="5" parent="4" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-01-31.21:41:17.758</IntrospectionTimestamp>
-      <IntrospectionStateNumber>2173</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-02-05.20:55:42.141</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2543</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -139,27 +139,32 @@
     <column id="26" parent="11" name="strength">
       <Position>2</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1109</StateNumber>
+      <StateNumber>2533</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="27" parent="11" name="agility">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1097</StateNumber>
+      <StateNumber>2534</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="28" parent="11" name="intuition">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1098</StateNumber>
+      <StateNumber>2535</StateNumber>
+      <DefaultExpression>3</DefaultExpression>
     </column>
     <column id="29" parent="11" name="intelligence">
       <Position>5</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1099</StateNumber>
+      <StateNumber>2543</StateNumber>
+      <DefaultExpression>4</DefaultExpression>
     </column>
     <column id="30" parent="11" name="vitality">
       <Position>6</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1100</StateNumber>
+      <StateNumber>2537</StateNumber>
+      <DefaultExpression>6</DefaultExpression>
     </column>
     <column id="31" parent="11" name="wisdom">
       <Position>7</Position>
@@ -174,7 +179,8 @@
     <column id="33" parent="11" name="maxhp">
       <Position>9</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1103</StateNumber>
+      <StateNumber>2538</StateNumber>
+      <DefaultExpression>60</DefaultExpression>
     </column>
     <column id="34" parent="11" name="login">
       <Position>10</Position>
@@ -202,7 +208,9 @@
     <column id="38" parent="11" name="hp">
       <Position>14</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>1169</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>2540</StateNumber>
+      <DefaultExpression>60</DefaultExpression>
     </column>
     <column id="39" parent="11" name="expnextlvl">
       <Position>15</Position>
@@ -280,99 +288,111 @@
     <column id="52" parent="13" name="lvl">
       <Position>1</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>2171</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>2195</StateNumber>
     </column>
     <column id="53" parent="13" name="experience">
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <StateNumber>2171</StateNumber>
     </column>
-    <column id="54" parent="14" name="id">
+    <index id="54" parent="13" name="table_lvl_lvl_pk">
+      <ObjectId>41616</ObjectId>
+      <ColNames>lvl</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="13" name="table_lvl_lvl_pk">
+      <ObjectId>41617</ObjectId>
+      <ColNames>lvl</ColNames>
+      <UnderlyingIndexName>table_lvl_lvl_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="14" name="id">
       <Position>9</Position>
       <DataType>uuid|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>863</StateNumber>
     </column>
-    <column id="55" parent="14" name="login">
+    <column id="57" parent="14" name="login">
       <Position>10</Position>
       <DataType>varchar|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>857</StateNumber>
     </column>
-    <column id="56" parent="14" name="pass">
+    <column id="58" parent="14" name="pass">
       <Position>11</Position>
       <DataType>varchar|0</DataType>
       <StateNumber>864</StateNumber>
     </column>
-    <index id="57" parent="14" name="users_pkey">
+    <index id="59" parent="14" name="users_pkey">
       <ObjectId>33389</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="58" parent="14" name="users_login_uindex">
+    <index id="60" parent="14" name="users_login_uindex">
       <ObjectId>33403</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="59" parent="14" name="users_pkey">
+    <key id="61" parent="14" name="users_pkey">
       <ObjectId>33390</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <argument id="60" parent="15">
+    <argument id="62" parent="15">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="61" parent="16">
+    <argument id="63" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="62" parent="17" name="namespace">
+    <argument id="64" parent="17" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="63" parent="17" name="name">
+    <argument id="65" parent="17" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </argument>
-    <argument id="64" parent="17">
+    <argument id="66" parent="17">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="65" parent="18">
+    <argument id="67" parent="18">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="66" parent="19" name="namespace">
+    <argument id="68" parent="19" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="67" parent="19" name="name">
+    <argument id="69" parent="19" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </argument>
-    <argument id="68" parent="19">
+    <argument id="70" parent="19">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="69" parent="20">
+    <argument id="71" parent="20">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="70" parent="21">
+    <argument id="72" parent="21">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="71" parent="22">
+    <argument id="73" parent="22">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="72" parent="23">
+    <argument id="74" parent="23">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="73" parent="24">
+    <argument id="75" parent="24">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>

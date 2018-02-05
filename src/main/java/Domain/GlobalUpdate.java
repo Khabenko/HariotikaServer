@@ -12,7 +12,7 @@ public class GlobalUpdate extends Thread {
     private HariotikaMessage hariotikaMessage;
     private Character character;
     private Gson gson;
-    private int regenerationHP = 1;
+  //  private int regenerationHP = 1;
 
     public GlobalUpdate() {
         this.start();
@@ -33,7 +33,7 @@ public class GlobalUpdate extends Thread {
          for (HashMap.Entry<String, Character> pair : ServerWS.getCharacterMap().entrySet()) {
              character = ServerWS.getCharacterMap().get(pair.getKey() );
              if (character.getHP()< character.getMaxHP() && !character.isInBattle() && character.getName()!= "Bot") {
-                 character.setHP(character.getHP() + regenerationHP);
+                 character.setHP(character.getHP() + character.getHp_perSec());
                  ServerWS.getCharacterMap().get(character.getName()).setHP(character.getHP());
              }
 

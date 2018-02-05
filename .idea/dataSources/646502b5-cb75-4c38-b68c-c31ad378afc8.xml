@@ -13,8 +13,8 @@
     </database>
     <schema id="4" parent="3" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-02-04.22:14:06.986</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1055</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-02-05.20:53:55.295</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1086</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -159,7 +159,8 @@
     <column id="29" parent="10" name="vitality">
       <Position>6</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1086</StateNumber>
+      <DefaultExpression>6</DefaultExpression>
     </column>
     <column id="30" parent="10" name="wisdom">
       <Position>7</Position>

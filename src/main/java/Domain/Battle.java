@@ -76,16 +76,16 @@ public class Battle {
 
         if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
         {
-            int hpBefore = player2.getHP();
+         //   int hpBefore = player2.getHP();
 
-            player1.hit(player2);
+            player1Damaged += player1.hit(player2);
 
             log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+"  \n";
             System.out.println("HP Игрока 1 "+player1.getHP());
 
-            int hpAfter = player2.getHP();
+        //    int hpAfter = player2.getHP();
 
-            player1Damaged += hpBefore-hpAfter;
+         //   player1Damaged += hpBefore-hpAfter;
 
         }
         else {
@@ -95,14 +95,19 @@ public class Battle {
 
         if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
         {
-            int hpBefore = player1.getHP();
+        //    int hpBefore = player1.getHP();
 
-            player2.hit(player1);
+            player2Damaged += player2.hit(player1);
             log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit;
             System.out.println("HP Игрока 2 "+player2.getHP());
 
-            int hpAfter = player1.getHP();
-            player2Damaged += hpBefore-hpAfter;
+         //   int hpAfter = player1.getHP();
+          //  player2Damaged += hpBefore-hpAfter;
+
+
+
+
+
 
         }else {
             log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit+" but was Block";
@@ -306,7 +311,6 @@ public class Battle {
              player1IsReady = true;
              player1Hit = VALUES.get(RANDOM.nextInt(SIZE));
              int random = RANDOM.nextInt(SIZE);
-           //  player1Def = VALUES.get(RANDOM.nextInt(SIZE));
              player1Defance.add(VALUES.get(random));
              player1Defance.add(VALUES.get(random+1));
          }
@@ -321,6 +325,22 @@ public class Battle {
              player2Defance.add(VALUES.get(random+1));
 
          }
+
+    }
+
+
+    public PartOfBody randomPartOfBody(){
+        List<PartOfBody> VALUES = new ArrayList<PartOfBody>();
+        VALUES.add(PartOfBody.HEAD);
+        VALUES.add(PartOfBody.NECK);
+        VALUES.add(PartOfBody.CHEST);
+        VALUES.add(PartOfBody.BELLY);
+        VALUES.add(PartOfBody.LEGS);
+        VALUES.add(PartOfBody.HEAD);
+        int SIZE = VALUES.size()-1;
+        Random RANDOM = new Random();
+        int random = RANDOM.nextInt(SIZE);
+        return VALUES.get(random);
 
     }
 
