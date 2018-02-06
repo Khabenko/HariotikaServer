@@ -101,7 +101,7 @@ public class ServerWS   {
            PartOfBody whatDef = PartOfBody.valueOf(message.getDef());
            ArrayList<PartOfBody> playerDeanceList = message.getPlayerDefance();
            try {
-
+           if (arena.getBattleList().containsKey(Long.valueOf(number)))
            if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)){
                //Мы первый игрок
                arena.getBattleList().get(number).setPlayer1Defance(message.getPlayerDefance());
@@ -119,6 +119,7 @@ public class ServerWS   {
            catch (Exception e){
                e.printStackTrace();
            }
+
        }
 
         private void registrationToBattle(){
@@ -130,8 +131,9 @@ public class ServerWS   {
            //add Bot
            Character character = new Character();
            character.setName("Bot");
-           character.setHP(60);
-           character.setStrength(3);
+            character.setMaxHP(60);
+            character.setHP(60);
+            character.setStrength(3);
             character.setAgility(3);
             character.setIntuition(3);
             character.updatePlayerCharacteristics();

@@ -149,14 +149,15 @@ public class Character implements Comparable, Serializable {
         System.out.println("Power_сriticalPhyAttack "+this.power_сriticalPhyAttack);
 
         this.chance_counterattack = (int) (this.intuition*0.3);
-        System.out.println("Power_сriticalPhyAttack "+this.power_сriticalPhyAttack);
+        System.out.println("cChance_counterattack "+this.chance_counterattack);
 
         this.chance_parry = (int) (this.intuition*0.3);
-        System.out.println("Power_сriticalPhyAttack "+this.chance_parry);
+        System.out.println("Chance_parry "+this.chance_parry);
 
     }
 
-    public int hit(Character enemy){
+    public RoundLogs hit(Character enemy){
+         RoundLogs roundLogs = new RoundLogs();
         System.out.println(getName()+"--------Hit--------"+enemy.getName());
         int damage = phy_attack - (enemy.armor-this.armor_penetration);
         System.out.println("Damage "+damage);
@@ -164,25 +165,28 @@ public class Character implements Comparable, Serializable {
         System.out.println("Crit chance "+critChance);
         int powercrit = this.power_сriticalPhyAttack - enemy.getPower_сriticalPhyAttack();
         System.out.println("Power crit "+powercrit);
-
-        if (damage<0)
-            damage=0;
-         if (critChance<0)
-             critChance =0;
-         if (powercrit<1)
-             powercrit=1;
-
-
-
         int enemyEvasion = enemy.getEvesion() - this.decreaseEnemyEvesion;
 
-        System.out.println(random(1,101));
-        System.out.println(enemyEvasion);
-        System.out.println(enemyEvasion >= random(1,101));
 
-        if (enemyEvasion <= random(1,101) ){
-            if (enemy.chance_parry <= random(1,101) ){
-                if (critChance>= random(1,101)){
+        if (damage<0) damage=0;
+         if (critChance<0) critChance =0;
+         if (powercrit<1) powercrit=1;
+
+        boolean enemyDodge = enemyEvasion <= random(1,101);
+        boolean enemyParry = enemyEvasion <= random(1,101);
+        boolean critacalHit = critChance>= random(1,101);
+        boolean counterattack = chance_counterattack >= random(1,101);
+
+        roundLogs.setEnemyDodge(enemyDodge);
+        roundLogs.setEnemyParry(enemyParry);
+        roundLogs.setPlayerCritkal(critacalHit);
+        roundLogs.setPlayerCounterattack(counterattack);
+
+
+
+        if (enemyDodge){
+            if (enemyParry){
+                if (critacalHit){
                     //Крит прошел
                     damage = damage*powercrit;
                 }
@@ -196,7 +200,9 @@ public class Character implements Comparable, Serializable {
         else {
             System.out.println(enemy.getName()+" evaged "+enemyEvasion);
         }
-         return damage;
+
+         roundLogs.setPlayerDamaged(damage);
+         return roundLogs;
 
 
        // int perReductionPhyDamage = (100-(enemy.getArmor()/enemy.getLvl()))/100;

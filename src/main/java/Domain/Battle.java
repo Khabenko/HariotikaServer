@@ -34,8 +34,16 @@ public class Battle {
     private boolean player1IsReady;
     private boolean player2IsReady;
 
+
+    private ArrayList<PartOfBody> player1Hitting;
+    private ArrayList<PartOfBody> player2Hitting;
+
     private ArrayList<PartOfBody>  player1Defance;
     private ArrayList<PartOfBody>  player2Defance;
+
+
+    private RoundLogs player1LogHit;
+    private RoundLogs player2LogHit;
 
     private int player1Damaged;
     private int player2Damaged;
@@ -62,6 +70,8 @@ public class Battle {
 
         this.player1Defance =  new ArrayList<PartOfBody>();
         this.player2Defance = new ArrayList<PartOfBody>();
+        this.player1LogHit = new RoundLogs();
+        this.player2LogHit = new RoundLogs();
 
     }
 
@@ -73,44 +83,36 @@ public class Battle {
         System.out.println("Fight");
         log = "";
 
-
         if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
         {
-         //   int hpBefore = player2.getHP();
+            player1LogHit= player1.hit(player2);
+            player1Damaged+= player1LogHit.getPlayerDamaged();
 
-            player1Damaged += player1.hit(player2);
-
-            log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+"  \n";
+            log=player1.getName()+" hit "+player2.getName()+" to "+ player1Hit+" "+"  \n";
             System.out.println("HP Игрока 1 "+player1.getHP());
-
-        //    int hpAfter = player2.getHP();
-
-         //   player1Damaged += hpBefore-hpAfter;
 
         }
         else {
-            log=player1.getName()+" hitting "+player2.getName()+" to "+ player1Hit+" "+" but was Block"+"  \n";
+             player1LogHit.setEnemyBlock(true);
+            log=player1.getName()+" hit "+player2.getName()+" to "+ player1Hit+" "+"(Block)"+"  \n";
         }
+
+
 
 
         if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
         {
-        //    int hpBefore = player1.getHP();
 
-            player2Damaged += player2.hit(player1);
-            log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit;
+            player2LogHit = player2.hit(player1);
+            player2Damaged+= player2LogHit.getPlayerDamaged();
+
+            log+=player2.getName()+" hit "+player1.getName()+" to "+ player2Hit;
             System.out.println("HP Игрока 2 "+player2.getHP());
-
-         //   int hpAfter = player1.getHP();
-          //  player2Damaged += hpBefore-hpAfter;
-
-
-
-
 
 
         }else {
-            log+=player2.getName()+" hitting "+player1.getName()+" to "+ player2Hit+" but was Block";
+            player2LogHit.setEnemyBlock(true);
+            log+=player2.getName()+" hit "+player1.getName()+" to "+ player2Hit+" (Block)";
         }
 
         System.out.println(gson.toJson(this));
@@ -158,7 +160,7 @@ public class Battle {
 
 
     public void startfight() {
-        System.out.println("Бой начался");
+        System.out.println("Battle started");
         Gson gson = new Gson();
         while (!isFinish())
         {
@@ -172,12 +174,14 @@ public class Battle {
 
             runTimer();
             fightWithBot();
+
             try {
                 Thread.sleep(1000);
                 System.out.print("");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
 
             if (isRedy()){
                 fight();
@@ -186,7 +190,7 @@ public class Battle {
                     break;
             }
          //   setPlayer1IsReady(true);
-        //    setPlayer2IsReady(true);
+
 
 
 
@@ -194,12 +198,12 @@ public class Battle {
 
         player1.setInBattle(false);
         player2.setInBattle(false);
-        System.out.println("В бою p1 "+player1.isInBattle());
-        System.out.println("В бою p2 "+player2.isInBattle());
-        System.out.println("Бой закончен");
+       // System.out.println("В бою p1 "+player1.isInBattle());
+       // System.out.println("В бою p2 "+player2.isInBattle());
+        System.out.println("Battle finish");
         finished =true;
         Arena.battleList.remove(number);
-        System.out.println("Бой удален "+Arena.battleList.containsKey(number));
+        System.out.println("Battle deleted "+Arena.battleList.containsKey(number));
 
 
 
