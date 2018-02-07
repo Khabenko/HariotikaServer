@@ -13,8 +13,8 @@
     </database>
     <schema id="4" parent="3" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-02-05.20:53:55.295</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1086</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-02-07.22:31:50.137</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1211</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -43,7 +43,7 @@
     </schema>
     <table id="10" parent="4" name="character">
       <ObjectId>16405</ObjectId>
-      <StateNumber>874</StateNumber>
+      <StateNumber>1211</StateNumber>
     </table>
     <table id="11" parent="4" name="equipment">
       <ObjectId>16411</ObjectId>
@@ -214,33 +214,39 @@
       <StateNumber>921</StateNumber>
       <DefaultExpression>100</DefaultExpression>
     </column>
-    <index id="39" parent="10" name="character_id_uindex">
+    <column id="39" parent="10" name="pointcharacteristics">
+      <Position>16</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1211</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="40" parent="10" name="character_id_uindex">
       <ObjectId>16429</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="40" parent="10" name="character_pkey">
+    <index id="41" parent="10" name="character_pkey">
       <ObjectId>16423</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="41" parent="10" name="character_login_uindex">
+    <index id="42" parent="10" name="character_login_uindex">
       <ObjectId>16430</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="42" parent="10" name="character_name_uindex">
+    <index id="43" parent="10" name="character_name_uindex">
       <ObjectId>16431</ObjectId>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="43" parent="10" name="character_pkey">
+    <key id="44" parent="10" name="character_pkey">
       <ObjectId>16424</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>character_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="44" parent="10" name="character_users_login_fk">
+    <foreign-key id="45" parent="10" name="character_users_login_fk">
       <ObjectId>16434</ObjectId>
       <ColNames>login</ColNames>
       <RefTableId>16417</RefTableId>
@@ -248,135 +254,135 @@
       <RefTableName>users</RefTableName>
       <RefColNames>login</RefColNames>
     </foreign-key>
-    <column id="45" parent="11" name="id">
+    <column id="46" parent="11" name="id">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>563</StateNumber>
     </column>
-    <column id="46" parent="11" name="nameequipment">
+    <column id="47" parent="11" name="nameequipment">
       <Position>2</Position>
       <DataType>varchar|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>563</StateNumber>
     </column>
-    <column id="47" parent="11" name="typeequipment">
+    <column id="48" parent="11" name="typeequipment">
       <Position>3</Position>
       <DataType>uuid|0</DataType>
       <StateNumber>563</StateNumber>
     </column>
-    <index id="48" parent="11" name="equipment_id_uindex">
+    <index id="49" parent="11" name="equipment_id_uindex">
       <ObjectId>16432</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="11" name="equipment_pkey">
+    <index id="50" parent="11" name="equipment_pkey">
       <ObjectId>16425</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="11" name="equipment_pkey">
+    <key id="51" parent="11" name="equipment_pkey">
       <ObjectId>16426</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>equipment_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="12" name="lvl">
+    <column id="52" parent="12" name="lvl">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <StateNumber>876</StateNumber>
     </column>
-    <column id="52" parent="12" name="experience">
+    <column id="53" parent="12" name="experience">
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <StateNumber>876</StateNumber>
     </column>
-    <column id="53" parent="13" name="id">
+    <column id="54" parent="13" name="id">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>565</StateNumber>
     </column>
-    <column id="54" parent="13" name="login">
+    <column id="55" parent="13" name="login">
       <Position>2</Position>
       <DataType>varchar|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>565</StateNumber>
     </column>
-    <column id="55" parent="13" name="pass">
+    <column id="56" parent="13" name="pass">
       <Position>3</Position>
       <DataType>varchar|0</DataType>
       <StateNumber>565</StateNumber>
     </column>
-    <index id="56" parent="13" name="users_pkey">
+    <index id="57" parent="13" name="users_pkey">
       <ObjectId>16427</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="57" parent="13" name="users_login_uindex">
+    <index id="58" parent="13" name="users_login_uindex">
       <ObjectId>16433</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="58" parent="13" name="users_pkey">
+    <key id="59" parent="13" name="users_pkey">
       <ObjectId>16428</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <argument id="59" parent="14">
+    <argument id="60" parent="14">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="60" parent="15">
+    <argument id="61" parent="15">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="61" parent="16" name="namespace">
+    <argument id="62" parent="16" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="62" parent="16" name="name">
+    <argument id="63" parent="16" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </argument>
-    <argument id="63" parent="16">
+    <argument id="64" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="64" parent="17">
+    <argument id="65" parent="17">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="65" parent="18" name="namespace">
+    <argument id="66" parent="18" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="66" parent="18" name="name">
+    <argument id="67" parent="18" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </argument>
-    <argument id="67" parent="18">
+    <argument id="68" parent="18">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="68" parent="19">
+    <argument id="69" parent="19">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="69" parent="20">
+    <argument id="70" parent="20">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="70" parent="21">
+    <argument id="71" parent="21">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="71" parent="22">
+    <argument id="72" parent="22">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="72" parent="23">
+    <argument id="73" parent="23">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>

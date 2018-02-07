@@ -5,6 +5,7 @@ import Domain.Character;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import db.Login;
+import db.UpdateDB;
 import db.Users;
 import org.slf4j.*;
 
@@ -101,20 +102,24 @@ public class ServerWS   {
            PartOfBody whatDef = PartOfBody.valueOf(message.getDef());
            ArrayList<PartOfBody> playerDeanceList = message.getPlayerDefance();
            try {
-           if (arena.getBattleList().containsKey(Long.valueOf(number)))
-           if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)){
-               //Мы первый игрок
-               arena.getBattleList().get(number).setPlayer1Defance(message.getPlayerDefance());
-               arena.getBattleList().get(number).setPlayer1Hit(wereHit);
-               arena.getBattleList().get(number).setPlayer1Def(whatDef);
-               arena.getBattleList().get(number).setPlayer1IsReady(true);
+           if (arena.getBattleList().containsKey(Long.valueOf(number))) {
+               if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)) {
+                   //Мы первый игрок
+                   arena.getBattleList().get(number).setPlayer1Defance(message.getPlayerDefance());
+                   arena.getBattleList().get(number).setPlayer1Hit(wereHit);
+                   arena.getBattleList().get(number).setPlayer1Def(whatDef);
+                   arena.getBattleList().get(number).setPlayer1IsReady(true);
+               } else if (arena.getBattleList().get(Long.valueOf(number)).getPlayer2().getName().equals(name)) {
+                   arena.getBattleList().get(number).setPlayer2Defance(message.getPlayerDefance());
+                   arena.getBattleList().get(number).setPlayer2Hit(wereHit);
+                   arena.getBattleList().get(number).setPlayer2Def(whatDef);
+                   arena.getBattleList().get(number).setPlayer2IsReady(true);
+               }
+           }else {
+
+               sendMessage(gson.toJson(new HariotikaMessage(Command.Battle,WsCode.RemoveBattle)));
+
            }
-           else if (arena.getBattleList().get(Long.valueOf(number)).getPlayer2().getName().equals(name)) {
-               arena.getBattleList().get(number).setPlayer2Defance(message.getPlayerDefance());
-               arena.getBattleList().get(number).setPlayer2Hit(wereHit);
-               arena.getBattleList().get(number).setPlayer2Def(whatDef);
-               arena.getBattleList().get(number).setPlayer2IsReady(true);
-              }
            }
            catch (Exception e){
                e.printStackTrace();
@@ -182,6 +187,9 @@ public class ServerWS   {
                 break;
             case Authorithation:
                 verifyLogin(message);
+                break;
+            case UpdateCharacter:
+                UpdateDB.UpdateDB(message.getCharacter());
                 break;
             default:
                 System.out.println("Invalid WsCode "+message.getCode());

@@ -69,7 +69,7 @@ public class Arena extends Thread {
 
     @Override
     public void run() {
-        System.out.println("------------Запущенно создание батлов------------");
+        System.out.println("------------Started Arena------------");
              while (true){
                  createBattle();
              }
@@ -83,7 +83,7 @@ public class Arena extends Thread {
 
            if (pair.getValue().size()>1 && pair.getValue().size()%2==0 ){
 
-               System.out.println("----------Создан БАТЛ-------------LVL = "+pair.getKey());
+               System.out.println("----------Greated Battle-------------LVL = "+pair.getKey());
 
 
                long number = new Date().getTime();
@@ -107,9 +107,8 @@ public class Arena extends Thread {
                    }
                };
                thread.start();
-               System.out.println();
                hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, battle);
-               System.out.println(hariotikaMessage);
+              // System.out.println(hariotikaMessage);
 
                if (player1.getName()!="Bot")
                player1.sendMessage(gson.toJson(hariotikaMessage));

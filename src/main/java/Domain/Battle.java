@@ -22,7 +22,8 @@ public class Battle {
     long timer;
     long endBattleTime;
     long startBattleTime;
-    String log = "";
+    int round;
+
 
     Character winner;
 
@@ -67,6 +68,7 @@ public class Battle {
         this.player2IsReady =false;
         this.player1Damaged =0;
         this.player2Damaged =0;
+        this.round=0;
 
         this.player1Defance =  new ArrayList<PartOfBody>();
         this.player2Defance = new ArrayList<PartOfBody>();
@@ -79,43 +81,29 @@ public class Battle {
     public void fight(){
         HariotikaMessage hariotikaMessage;
         Gson  gson = new Gson();
-
         System.out.println("Fight");
-        log = "";
 
         if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
         {
             player1LogHit= player1.hit(player2);
             player1Damaged+= player1LogHit.getPlayerDamaged();
-
-            log=player1.getName()+" hit "+player2.getName()+" to "+ player1Hit+" "+"  \n";
             System.out.println("HP Игрока 1 "+player1.getHP());
-
         }
         else {
              player1LogHit.setEnemyBlock(true);
-            log=player1.getName()+" hit "+player2.getName()+" to "+ player1Hit+" "+"(Block)"+"  \n";
         }
-
-
-
 
         if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
         {
-
             player2LogHit = player2.hit(player1);
             player2Damaged+= player2LogHit.getPlayerDamaged();
-
-            log+=player2.getName()+" hit "+player1.getName()+" to "+ player2Hit;
             System.out.println("HP Игрока 2 "+player2.getHP());
-
 
         }else {
             player2LogHit.setEnemyBlock(true);
-            log+=player2.getName()+" hit "+player1.getName()+" to "+ player2Hit+" (Block)";
         }
 
-        System.out.println(gson.toJson(this));
+       /// System.out.println(gson.toJson(this));
 
         if (isFinish()) {
             finished = true;
@@ -171,10 +159,8 @@ public class Battle {
             if (player2.getName()!="Bot")
                 player2.sendMessage(gson.toJson(hariotikaMessage));
 
-
             runTimer();
             fightWithBot();
-
             try {
                 Thread.sleep(1000);
                 System.out.print("");
@@ -182,19 +168,17 @@ public class Battle {
                 e.printStackTrace();
             }
 
-
             if (isRedy()){
                 fight();
 
                if (isFinish())
                     break;
             }
-         //   setPlayer1IsReady(true);
-
-
-
 
         }
+
+
+
 
         player1.setInBattle(false);
         player2.setInBattle(false);
@@ -370,6 +354,7 @@ public class Battle {
             lvl = player.getLvl();
             player.setExperience(exp);
             player.setLvl(lvl+1);
+            player.setPointCharacteristics(player.getPointCharacteristics()+5);
             player.setExpnextlvl(nextLevelEXP(player.getLvl()));
         }
 

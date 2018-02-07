@@ -63,6 +63,8 @@ public class Character implements Comparable, Serializable {
     private int experience;
     @Column(name = "expnextlvl")
     private int expnextlvl;
+    @Column(name = "pointCharacteristics")
+    private int pointCharacteristics;
 
 
 
@@ -92,6 +94,7 @@ public class Character implements Comparable, Serializable {
     private int chance_counterattack;
     @Transient
     private int chance_parry;
+
 
 
 
@@ -132,38 +135,38 @@ public class Character implements Comparable, Serializable {
         this.decreasePower_Crit = (int) (this.strength*0.8);
         System.out.println("Decrease Power_Crit "+this.decreasePower_Crit);
 
-        this.evesion = (int) (this.agility*0.7);
+        this.evesion = (int) (5+this.agility*0.7);
         System.out.println("Evesion "+this.evesion);
 
         this.decreaseEnemyEvesion = (int) (this.agility*0.3);
         System.out.println("Decrease Enemy Evesion "+this.decreaseEnemyEvesion);
 
         this.armor_penetration = (int) (this.agility);
-        System.out.println("Armor_penetration "+this.armor_penetration);
+        System.out.println("Armor penetration "+this.armor_penetration);
 
 
-        this.chance_сriticalPhyAttack = (int) (this.intuition*0.4);
-        System.out.println("Chance_сriticalPhyAttack "+this.chance_сriticalPhyAttack);
+        this.chance_сriticalPhyAttack = (int) (5+this.intuition*0.4);
+        System.out.println("Chance сriticalPhyAttack "+this.chance_сriticalPhyAttack);
 
         this.power_сriticalPhyAttack = (int) (this.intuition*2);
-        System.out.println("Power_сriticalPhyAttack "+this.power_сriticalPhyAttack);
+        System.out.println("Power сriticalPhyAttack "+this.power_сriticalPhyAttack);
 
         this.chance_counterattack = (int) (this.intuition*0.3);
-        System.out.println("cChance_counterattack "+this.chance_counterattack);
+        System.out.println("Chance counterattack "+this.chance_counterattack);
 
-        this.chance_parry = (int) (this.intuition*0.3);
-        System.out.println("Chance_parry "+this.chance_parry);
+        this.chance_parry = (int) (5+this.intuition*0.3);
+        System.out.println("Chance parry "+this.chance_parry);
 
     }
 
     public RoundLogs hit(Character enemy){
-         RoundLogs roundLogs = new RoundLogs();
+        RoundLogs roundLogs = new RoundLogs();
         System.out.println(getName()+"--------Hit--------"+enemy.getName());
         int damage = phy_attack - (enemy.armor-this.armor_penetration);
         System.out.println("Damage "+damage);
         int critChance = this.chance_сriticalPhyAttack-enemy.getDecreasePersen_Crit();
         System.out.println("Crit chance "+critChance);
-        int powercrit = this.power_сriticalPhyAttack - enemy.getPower_сriticalPhyAttack();
+        int powercrit = this.power_сriticalPhyAttack - enemy.getDecreasePower_Crit();
         System.out.println("Power crit "+powercrit);
         int enemyEvasion = enemy.getEvesion() - this.decreaseEnemyEvesion;
 
@@ -491,5 +494,13 @@ public class Character implements Comparable, Serializable {
 
     public void setChance_parry(int chance_parry) {
         this.chance_parry = chance_parry;
+    }
+
+    public int getPointCharacteristics() {
+        return pointCharacteristics;
+    }
+
+    public void setPointCharacteristics(int pointCharacteristics) {
+        this.pointCharacteristics = pointCharacteristics;
     }
 }
