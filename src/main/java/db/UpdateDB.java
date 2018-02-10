@@ -10,8 +10,11 @@ public class UpdateDB {
 
     public static void  UpdateDB(Object object){
 
+            session = HibernateUtil2.getSessionFactory().openSession();
             session.beginTransaction();
-            session.saveOrUpdate(object);
+        //    session.saveOrUpdate(object);
+            session.update(object);
+            session.flush();
             session.getTransaction().commit();
 
 

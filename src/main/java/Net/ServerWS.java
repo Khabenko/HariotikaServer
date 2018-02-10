@@ -137,6 +137,8 @@ public class ServerWS   {
            Character character = new Character();
            character.setName("Bot");
             character.setMaxHP(60);
+            character.setMaxMP(40);
+            character.setMP(40);
             character.setHP(60);
             character.setStrength(3);
             character.setAgility(3);
@@ -188,8 +190,12 @@ public class ServerWS   {
             case Authorithation:
                 verifyLogin(message);
                 break;
-            case UpdateCharacter:
-                UpdateDB.UpdateDB(message.getCharacter());
+            case UpdateCharacter: {
+                // Незабудь проверку добавить баран, чтобы не взломали
+                characterMap.put(message.getCharacter().getName(),message.getCharacter());
+                characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+                UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
+            }
                 break;
             default:
                 System.out.println("Invalid WsCode "+message.getCode());

@@ -69,6 +69,11 @@ public class Character implements Comparable, Serializable {
 
 
     @Transient
+    private int maxMP;
+    @Transient
+    private int MP;
+
+    @Transient
     private int hp_perSec;
     @Transient
     private int mp_perSec;
@@ -123,8 +128,15 @@ public class Character implements Comparable, Serializable {
         this.phy_attack = this.getStrength() +this.getAgility()+this.getIntuition();
         System.out.println("Phy attack "+phy_attack);
 
+
+        this.mp_perSec = (int) (1+intelligence*0.2);
+        System.out.println("MP per Sec "+mp_perSec);
+
         this.hp_perSec = 1+(int)(this.strength*0.02);
         System.out.println("Hp per Sec "+this.hp_perSec);
+
+        this.maxMP = intelligence*4;
+        System.out.println("MAX MP "+this.maxMP);
 
         this.armor = this.strength*3;
         System.out.println("Armor "+this.armor);
@@ -230,7 +242,7 @@ public class Character implements Comparable, Serializable {
             synchronized (getSessionMap().get(this.getName())) {
                 if (getSessionMap().get(this.getName()).isOpen()) {
                     getSessionMap().get(this.getName()).getMessageHandlers().clear();
-                 //   System.out.println("Игроку " + getName() + " отправленно " + message);
+                   //System.out.println("Игроку " + getName() + " отправленно " + message);
                    // getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
                       getSessionMap().get(this.getName()).getBasicRemote().sendText(message);
                 }
@@ -502,5 +514,21 @@ public class Character implements Comparable, Serializable {
 
     public void setPointCharacteristics(int pointCharacteristics) {
         this.pointCharacteristics = pointCharacteristics;
+    }
+
+    public int getMaxMP() {
+        return maxMP;
+    }
+
+    public void setMaxMP(int maxMP) {
+        this.maxMP = maxMP;
+    }
+
+    public int getMP() {
+        return MP;
+    }
+
+    public void setMP(int MP) {
+        this.MP = MP;
     }
 }

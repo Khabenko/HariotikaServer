@@ -10,6 +10,11 @@ public enum  WsCode {
     UpdateBattle,
     UpdateTimer,
     RemoveBattle,
-    UpdateCharacter
-
+    UpdateCharacter,
+    Strength,
+    Agility,
+    Intuition,
+    Wisdom,
+    Vitality,
+    Intelligence;
 }
