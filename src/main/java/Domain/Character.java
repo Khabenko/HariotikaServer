@@ -128,7 +128,6 @@ public class Character implements Comparable, Serializable {
         this.phy_attack = this.getStrength() +this.getAgility()+this.getIntuition();
         System.out.println("Phy attack "+phy_attack);
 
-
         this.mp_perSec = (int) (1+intelligence*0.2);
         System.out.println("MP per Sec "+mp_perSec);
 

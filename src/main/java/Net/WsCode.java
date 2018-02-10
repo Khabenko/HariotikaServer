@@ -16,5 +16,6 @@ public enum  WsCode {
     Intuition,
     Wisdom,
     Vitality,
-    Intelligence;
+    Intelligence,
+    Reset
 }

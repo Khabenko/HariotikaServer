@@ -48,7 +48,9 @@ public class ServerWS   {
 
     @OnMessage
     public void onMessage(String message) throws IOException, InterruptedException {
-       parsingHariotikaMessage(message);
+        System.out.println(message);
+        parsingHariotikaMessage(message);
+
 
     }
 
@@ -167,6 +169,8 @@ public class ServerWS   {
                     break;
                 case Battle: commandBattleCode(hariotikaMessage);
                     break;
+                case Characteristic: commandCharacteristicCode(hariotikaMessage);
+                    break;
                 default:
                     System.out.println("Server sended "+message);
                     break;
@@ -204,9 +208,9 @@ public class ServerWS   {
 
     }
 
-    private void commandBattleCode(HariotikaMessage message){
+    private void commandBattleCode(HariotikaMessage message) {
 
-        switch (message.getCode()){
+        switch (message.getCode()) {
             case RegistrationToBattle:
                 registrationToBattle();
                 break;
@@ -217,11 +221,69 @@ public class ServerWS   {
                 updateBattle(message);
                 break;
             default:
-                System.out.println("Invalid WsCode "+message.getCode());
+                System.out.println("Invalid WsCode " + message.getCode());
                 break;
         }
+    }
+
+    private void commandCharacteristicCode(HariotikaMessage message){
+         Character character = characterMap.get(message.getCharacter().getName());
+
+        if (character.getPointCharacteristics() >0) {
+            switch (message.getCode()) {
+                case Strength:
+                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                    character.setStrength(character.getStrength() + 1);
+                    break;
+                case Agility:
+                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                    character.setAgility(character.getAgility() + 1);
+                    break;
+                case Intuition:
+                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                    character.setIntuition(character.getIntuition() + 1);
+                    break;
+                case Wisdom:
+                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                    character.setWisdom(character.getWisdom() + 1);
+                    break;
+                case Vitality:
+                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                    character.setVitality(character.getVitality() + 1);
+                    break;
+                case Intelligence:
+                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                    character.setIntelligence(character.getIntelligence() + 1);
+                    break;
+                default:
+                    System.out.println("Invalid WsCode " + message.getCode());
+                    break;
+
+            }
+
+            characterMap.put(message.getCharacter().getName(),character);
+            characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+            UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
+        }
+        else if (message.getCode() == WsCode.Reset){
+
+            int total = 0 ;
+            total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics();
+            character.setStrength(0);
+            character.setAgility(0);
+            character.setIntuition(0);
+            character.setWisdom(0);
+            character.setPointCharacteristics(total);
+
+            characterMap.put(message.getCharacter().getName(),character);
+            characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+            UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
+
+        }
+
 
     }
+
 
 
 

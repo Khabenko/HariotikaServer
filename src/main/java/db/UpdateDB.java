@@ -12,7 +12,7 @@ public class UpdateDB {
 
             session = HibernateUtil2.getSessionFactory().openSession();
             session.beginTransaction();
-        //    session.saveOrUpdate(object);
+          //  session.saveOrUpdate(object);
             session.update(object);
             session.flush();
             session.getTransaction().commit();
