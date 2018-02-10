@@ -92,9 +92,9 @@ public class Character implements Comparable, Serializable {
     @Transient
     private int armor_penetration;
     @Transient
-    private int chance_сriticalPhyAttack;
+    private int chance_criticalPhyAttack;
     @Transient
-    private int power_сriticalPhyAttack;
+    private int power_criticalPhyAttack;
     @Transient
     private int chance_counterattack;
     @Transient
@@ -156,11 +156,11 @@ public class Character implements Comparable, Serializable {
         System.out.println("Armor penetration "+this.armor_penetration);
 
 
-        this.chance_сriticalPhyAttack = (int) (5+this.intuition*0.4);
-        System.out.println("Chance сriticalPhyAttack "+this.chance_сriticalPhyAttack);
+        this.chance_criticalPhyAttack = (int) (5+this.intuition*0.4);
+        System.out.println("Chance criticalPhyAttack "+this.chance_criticalPhyAttack);
 
-        this.power_сriticalPhyAttack = (int) (this.intuition*2);
-        System.out.println("Power сriticalPhyAttack "+this.power_сriticalPhyAttack);
+        this.power_criticalPhyAttack = (int) (this.intuition*2);
+        System.out.println("Power criticalPhyAttack "+this.power_criticalPhyAttack);
 
         this.chance_counterattack = (int) (this.intuition*0.3);
         System.out.println("Chance counterattack "+this.chance_counterattack);
@@ -175,9 +175,9 @@ public class Character implements Comparable, Serializable {
         System.out.println(getName()+"--------Hit--------"+enemy.getName());
         int damage = phy_attack - (enemy.armor-this.armor_penetration);
         System.out.println("Damage "+damage);
-        int critChance = this.chance_сriticalPhyAttack-enemy.getDecreasePersen_Crit();
+        int critChance = this.chance_criticalPhyAttack-enemy.getDecreasePersen_Crit();
         System.out.println("Crit chance "+critChance);
-        int powercrit = this.power_сriticalPhyAttack - enemy.getDecreasePower_Crit();
+        int powercrit = this.power_criticalPhyAttack - enemy.getDecreasePower_Crit();
         System.out.println("Power crit "+powercrit);
         int enemyEvasion = enemy.getEvesion() - this.decreaseEnemyEvesion;
 
@@ -251,7 +251,7 @@ public class Character implements Comparable, Serializable {
         {
             if (getSessionMap().get(this.getName()).isOpen() ){
                 getSessionMap().get(this.getName()).getMessageHandlers().clear();
-                System.out.println("Ошибка отправки сообщения ироку " + name);
+                System.out.println("Ошибка отправки cообщения ироку " + name);
                 e.printStackTrace();
             sendMessage(message);
 
@@ -475,20 +475,20 @@ public class Character implements Comparable, Serializable {
         this.armor_penetration = armor_penetration;
     }
 
-    public int getChance_сriticalPhyAttack() {
-        return chance_сriticalPhyAttack;
+    public int getChance_criticalPhyAttack() {
+        return chance_criticalPhyAttack;
     }
 
-    public void setChance_сriticalPhyAttack(int chance_сriticalPhyAttack) {
-        this.chance_сriticalPhyAttack = chance_сriticalPhyAttack;
+    public void setChance_criticalPhyAttack(int chance_criticalPhyAttack) {
+        this.chance_criticalPhyAttack = chance_criticalPhyAttack;
     }
 
-    public int getPower_сriticalPhyAttack() {
-        return power_сriticalPhyAttack;
+    public int getPower_criticalPhyAttack() {
+        return power_criticalPhyAttack;
     }
 
-    public void setPower_сriticalPhyAttack(int power_сriticalPhyAttack) {
-        this.power_сriticalPhyAttack = power_сriticalPhyAttack;
+    public void setPower_criticalPhyAttack(int power_criticalPhyAttack) {
+        this.power_criticalPhyAttack = power_criticalPhyAttack;
     }
 
     public int getChance_counterattack() {
