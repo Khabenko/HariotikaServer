@@ -48,7 +48,6 @@ public class ServerWS   {
 
     @OnMessage
     public void onMessage(String message) throws IOException, InterruptedException {
-        System.out.println(message);
         parsingHariotikaMessage(message);
 
 
@@ -76,7 +75,7 @@ public class ServerWS   {
                        sessionMap.put(login.getCharacter().getName(), session);
                        if (!characterMap.containsKey(login.getCharacter().getName())) {
                            characterMap.put(login.getCharacter().getName(), login.getCharacter());
-                           System.out.println("В игру зашол "+message.getLogin());
+                           System.out.println("Logining to game: "+message.getLogin());
                        }
                        hariotikaMessage = new HariotikaMessage(Command.Login,WsCode.Success,characterMap.get(login.getCharacter().getName()));
                        sendMessage(gson.toJson(hariotikaMessage));
@@ -255,6 +254,19 @@ public class ServerWS   {
                     character.setPointCharacteristics(character.getPointCharacteristics() - 1);
                     character.setIntelligence(character.getIntelligence() + 1);
                     break;
+                case Reset:
+                    int total = 0 ;
+                    total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics();
+                    character.setStrength(0);
+                    character.setAgility(0);
+                    character.setIntuition(0);
+                    character.setWisdom(0);
+                    character.setPointCharacteristics(total);
+
+                    characterMap.put(message.getCharacter().getName(),character);
+                    characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+                    UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
+                    break;
                 default:
                     System.out.println("Invalid WsCode " + message.getCode());
                     break;
@@ -283,7 +295,6 @@ public class ServerWS   {
 
 
     }
-
 
 
 
