@@ -72,8 +72,7 @@ public class Battle {
 
         this.player1Defance =  new ArrayList<PartOfBody>();
         this.player2Defance = new ArrayList<PartOfBody>();
-        this.player1LogHit = new RoundLogs();
-        this.player2LogHit = new RoundLogs();
+
 
     }
 
@@ -85,11 +84,12 @@ public class Battle {
 
         if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
         {
-            player1LogHit= player1.hit(player2);
+            player1LogHit = player1.hit(player2);
             player1Damaged+= player1LogHit.getPlayerDamaged();
             System.out.println("HP Игрока 1 "+player1.getHP());
         }
         else {
+             this.player1LogHit = new RoundLogs();
              player1LogHit.setEnemyBlock(true);
         }
 
@@ -100,6 +100,7 @@ public class Battle {
             System.out.println("HP Игрока 2 "+player2.getHP());
 
         }else {
+            this.player2LogHit = new RoundLogs();
             player2LogHit.setEnemyBlock(true);
         }
 

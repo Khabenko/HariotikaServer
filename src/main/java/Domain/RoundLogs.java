@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class RoundLogs{
 
+
     private int playerDamaged;
     private boolean enemyBlock;
     private boolean enemyDodge;
