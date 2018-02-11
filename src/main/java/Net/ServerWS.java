@@ -37,6 +37,8 @@ public class ServerWS   {
         session = peer;
         session.setMaxTextMessageBufferSize(500000);
         session.setMaxBinaryMessageBufferSize(500000);
+        session.setMaxIdleTimeout(30000);
+
 
 
     }

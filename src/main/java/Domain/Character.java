@@ -170,6 +170,7 @@ public class Character implements Comparable, Serializable {
 
     }
 
+
     public RoundLogs hit(Character enemy){
         RoundLogs roundLogs = new RoundLogs();
         System.out.println(getName()+"--------Hit--------"+enemy.getName());
@@ -187,7 +188,7 @@ public class Character implements Comparable, Serializable {
          if (powercrit<1) powercrit=1;
 
         boolean enemyDodge = enemyEvasion <= random(1,101);
-        boolean enemyParry = enemyEvasion <= random(1,101);
+        boolean enemyParry = this.chance_parry <= random(1,101);
         boolean critacalHit = critChance>= random(1,101);
         boolean counterattack = chance_counterattack >= random(1,101);
 

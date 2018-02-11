@@ -32,7 +32,7 @@ public class Arena extends Thread {
             this.charQueue.put(i, new PriorityQueue<Character>());
         }
         this.start();
-        System.out.println("------------Арена создана------------");
+        System.out.println("------------Arena created------------");
     }
 
     public void addToArena(Character character) {
@@ -40,8 +40,8 @@ public class Arena extends Thread {
         for (HashMap.Entry<Integer, PriorityQueue<Character>>  pair: charQueue.entrySet()) {
             if(pair.getKey() == character.getLvl()){
                 if (!(pair.getValue().contains(character)) && !getCharacterMap().get(character.getName()).isInBattle()) {
-                    System.out.println("Проверка, естьли в очереди чар "+character.getName()+" "+pair.getValue().contains(character));
-                    System.out.println("Проверка, персонаж уже в бою "+getCharacterMap().get(character.getName()).isInBattle());
+                  //  System.out.println("Проверка, естьли в очереди чар "+character.getName()+" "+pair.getValue().contains(character));
+                 //   System.out.println("Проверка, персонаж уже в бою "+getCharacterMap().get(character.getName()).isInBattle());
                     pair.getValue().offer(getCharacterMap().get(character.getName()));
                 }
                 else {
