@@ -86,22 +86,26 @@ public class Battle {
         {
             player1LogHit = player1.hit(player2);
             player1Damaged+= player1LogHit.getPlayerDamaged();
-            System.out.println("HP Игрока 1 "+player1.getHP());
+            player1LogHit.setHit(getPlayer1Hit());
+            System.out.println("HP player 1 "+player1.getHP());
         }
         else {
              this.player1LogHit = new RoundLogs();
              player1LogHit.setEnemyBlock(true);
+             player1LogHit.setHit(getPlayer1Hit());
         }
 
         if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
         {
             player2LogHit = player2.hit(player1);
             player2Damaged+= player2LogHit.getPlayerDamaged();
-            System.out.println("HP Игрока 2 "+player2.getHP());
+            player2LogHit.setHit(getPlayer2Hit());
+            System.out.println("HP player 2 "+player2.getHP());
 
         }else {
             this.player2LogHit = new RoundLogs();
             player2LogHit.setEnemyBlock(true);
+            player2LogHit.setHit(getPlayer2Hit());
         }
 
        /// System.out.println(gson.toJson(this));

@@ -9,10 +9,9 @@ public class RoundLogs{
     private boolean enemyBlock;
     private boolean enemyDodge;
     private boolean enemyParry;
-
     private boolean playerCounterattack;
-
     private boolean playerCritkal;
+    private PartOfBody hit;
 
     public RoundLogs() {
         this.enemyDodge = true;
@@ -65,5 +64,13 @@ public class RoundLogs{
 
     public void setEnemyBlock(boolean enemyBlock) {
         this.enemyBlock = enemyBlock;
+    }
+
+    public PartOfBody getHit() {
+        return hit;
+    }
+
+    public void setHit(PartOfBody hit) {
+        this.hit = hit;
     }
 }

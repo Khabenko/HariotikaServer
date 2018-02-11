@@ -100,34 +100,31 @@ public class ServerWS   {
 
        public  void updateBattle(HariotikaMessage message ){
            Long number = Long.valueOf(message.getBattle().getNumber());
-           String name = message.getCharName();
-           PartOfBody wereHit = PartOfBody.valueOf(message.getHit());
-           PartOfBody whatDef = PartOfBody.valueOf(message.getDef());
-           ArrayList<PartOfBody> playerDeanceList = message.getPlayerDefance();
-           try {
-           if (arena.getBattleList().containsKey(Long.valueOf(number))) {
-               if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)) {
-                   //Мы первый игрок
-                   arena.getBattleList().get(number).setPlayer1Defance(message.getPlayerDefance());
-                   arena.getBattleList().get(number).setPlayer1Hit(wereHit);
-                   arena.getBattleList().get(number).setPlayer1Def(whatDef);
-                   arena.getBattleList().get(number).setPlayer1IsReady(true);
-               } else if (arena.getBattleList().get(Long.valueOf(number)).getPlayer2().getName().equals(name)) {
-                   arena.getBattleList().get(number).setPlayer2Defance(message.getPlayerDefance());
-                   arena.getBattleList().get(number).setPlayer2Hit(wereHit);
-                   arena.getBattleList().get(number).setPlayer2Def(whatDef);
-                   arena.getBattleList().get(number).setPlayer2IsReady(true);
+               String name = message.getCharName();
+               PartOfBody wereHit = PartOfBody.valueOf(message.getHit());
+               PartOfBody whatDef = PartOfBody.valueOf(message.getDef());
+               try {
+                   if (arena.getBattleList().containsKey(Long.valueOf(number))) {
+                       if (arena.getBattleList().get(Long.valueOf(number)).getPlayer1().getName().equals(name)) {
+                           //Мы первый игрок
+                           arena.getBattleList().get(number).setPlayer1Defance(message.getPlayerDefance());
+                           arena.getBattleList().get(number).setPlayer1Hit(wereHit);
+                           arena.getBattleList().get(number).setPlayer1Def(whatDef);
+                           arena.getBattleList().get(number).setPlayer1IsReady(true);
+                       } else if (arena.getBattleList().get(Long.valueOf(number)).getPlayer2().getName().equals(name)) {
+                           arena.getBattleList().get(number).setPlayer2Defance(message.getPlayerDefance());
+                           arena.getBattleList().get(number).setPlayer2Hit(wereHit);
+                           arena.getBattleList().get(number).setPlayer2Def(whatDef);
+                           arena.getBattleList().get(number).setPlayer2IsReady(true);
+                       }
+                   } else {
+
+                       sendMessage(gson.toJson(new HariotikaMessage(Command.Battle, WsCode.RemoveBattle)));
+
+                   }
+               } catch (Exception e) {
+                   e.printStackTrace();
                }
-           }else {
-
-               sendMessage(gson.toJson(new HariotikaMessage(Command.Battle,WsCode.RemoveBattle)));
-
-           }
-           }
-           catch (Exception e){
-               e.printStackTrace();
-           }
-
        }
 
         private void registrationToBattle(){
@@ -297,8 +294,6 @@ public class ServerWS   {
 
 
     }
-
-
 
 
 
