@@ -13,6 +13,11 @@ public class RoundLogs{
 
     private boolean playerCritkal;
 
+    public RoundLogs() {
+        this.enemyDodge = true;
+        this.enemyParry = true;
+    }
+
     public int getPlayerDamaged() {
         return playerDamaged;
     }
