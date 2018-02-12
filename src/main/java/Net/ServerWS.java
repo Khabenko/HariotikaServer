@@ -255,11 +255,14 @@ public class ServerWS   {
                     break;
                 case Reset:
                     int total = 0 ;
-                    total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics();
+                    total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics()+
+                    +character.getVitality()+character.getIntelligence();
                     character.setStrength(0);
                     character.setAgility(0);
                     character.setIntuition(0);
                     character.setWisdom(0);
+                    character.setVitality(0);
+                    character.setIntelligence(0);
                     character.setPointCharacteristics(total);
 
                     characterMap.put(message.getCharacter().getName(),character);

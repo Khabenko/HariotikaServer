@@ -80,8 +80,6 @@ public class Character implements Comparable, Serializable {
     @Transient
     private int phy_attack;
     @Transient
-    private int accuracy;
-    @Transient
     private int decreasePower_Crit;
     @Transient
     private int decreasePersen_Crit;
@@ -99,6 +97,17 @@ public class Character implements Comparable, Serializable {
     private int chance_counterattack;
     @Transient
     private int chance_parry;
+
+    @Transient
+    private int magic_armor;
+    @Transient
+    private int magic_attack;
+    @Transient
+    private int chance_criticalMagicAttack;
+
+
+
+
 
 
 
@@ -429,13 +438,6 @@ public class Character implements Comparable, Serializable {
         this.phy_attack = phy_attack;
     }
 
-    public int getAccuracy() {
-        return accuracy;
-    }
-
-    public void setAccuracy(int accuracy) {
-        this.accuracy = accuracy;
-    }
 
     public int getDecreasePower_Crit() {
         return decreasePower_Crit;
