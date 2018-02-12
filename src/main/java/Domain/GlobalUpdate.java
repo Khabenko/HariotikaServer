@@ -12,7 +12,7 @@ public class GlobalUpdate extends Thread {
     private HariotikaMessage hariotikaMessage;
     private Character character;
     private Gson gson;
-    private int regenerationHP = 1;
+  //  private int regenerationMP = 1;
 
     public GlobalUpdate() {
         this.start();
@@ -25,16 +25,19 @@ public class GlobalUpdate extends Thread {
      while (true) {
          try {
              Thread.sleep(1000);
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }
+
 
          //HP regeneration
          for (HashMap.Entry<String, Character> pair : ServerWS.getCharacterMap().entrySet()) {
              character = ServerWS.getCharacterMap().get(pair.getKey() );
              if (character.getHP()< character.getMaxHP() && !character.isInBattle() && character.getName()!= "Bot") {
-                 character.setHP(character.getHP() + regenerationHP);
+                 character.setHP(character.getHP() + character.getHp_perSec());
                  ServerWS.getCharacterMap().get(character.getName()).setHP(character.getHP());
+             }
+
+             if (character.getMP()< character.getMaxMP() && !character.isInBattle() && character.getName()!= "Bot") {
+                 character.setMP(character.getMP() + character.getMp_perSec());
+                 ServerWS.getCharacterMap().get(character.getName()).setMP(character.getMP());
              }
 
 
@@ -49,6 +52,9 @@ public class GlobalUpdate extends Thread {
                  //Удаляем сесию, если она закрыта
              }
          }
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+        }
 
      }
     }

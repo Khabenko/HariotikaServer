@@ -8,6 +8,14 @@ public enum  WsCode {
     RegistrationToBattle,
     CancelRegistrationToBattle,
     UpdateBattle,
-    UpdateTimer
-
+    UpdateTimer,
+    RemoveBattle,
+    UpdateCharacter,
+    Strength,
+    Agility,
+    Intuition,
+    Wisdom,
+    Vitality,
+    Intelligence,
+    Reset
 }

@@ -4,15 +4,16 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/Hariotika</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5433/Hariotika</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">1</property>
+        <property name="hibernate.connection.password">Pandora1987</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
         <property name="hbmdl.auto">update</property>
         <mapping class="db.Users"/>
         <mapping class="Domain.Character"/>
+        <mapping class="db.table_lvl"/>
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
         <!-- DB schema will be updated if needed -->

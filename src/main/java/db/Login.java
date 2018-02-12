@@ -75,13 +75,12 @@ public class Login  {
                 query = session.createQuery(hql);
                 List<Character> characters =  query.list();
                 character=characters.get(0);
+                character.updatePlayerCharacteristics();
                 return true;
             }
             else
                 return false;
-
         }
-
         return false;
     }
 
@@ -99,18 +98,21 @@ public class Login  {
         user.setPass("null");
         save(user);
         createNewChar();
-
-
     }
 
     public  void createNewChar(){
         character = new Character(user.getLogin(),user.getLogin());
         character.setLvl(1);
-        character.setHP(10);
-        character.setMaxHP(20);
-        character.setStrength(5);
-        character.setArmor(1);
+        character.setHP(60);
+        character.setMaxHP(60);
+        character.setStrength(3);
+        character.setAgility(3);
+        character.setIntuition(3);
+        character.setIntelligence(4);
+        character.setVitality(6);
         save(character);
+        character.updatePlayerCharacteristics();
+
 
 
         File avatar = new File("C:\\Avatars\\Default.png");

@@ -4,5 +4,6 @@ public enum Command {
 
     Login,
     Battle,
+    Characteristic
 
 }
