@@ -68,7 +68,7 @@ public class Battle {
         this.player2IsReady =false;
         this.player1Damaged =0;
         this.player2Damaged =0;
-        this.round=0;
+        this.round=1;
 
         this.player1Defance =  new ArrayList<PartOfBody>();
         this.player2Defance = new ArrayList<PartOfBody>();
@@ -129,6 +129,7 @@ public class Battle {
         player2IsReady =false;
         this.startBattleTime = new Date().getTime()/1000;
         this.endBattleTime = startBattleTime+30;
+        round+=1;
 
     }
 

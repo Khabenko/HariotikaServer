@@ -104,9 +104,12 @@ public class Character implements Comparable, Serializable {
     private int magic_attack;
     @Transient
     private int chance_criticalMagicAttack;
-
-
-
+    @Transient
+    private int power_criticalMagicAttack;
+    @Transient
+    private int cooldown_speed;
+    @Transient
+    private int magic_penetration;
 
 
 
@@ -135,47 +138,42 @@ public class Character implements Comparable, Serializable {
         System.out.println("Updated characteristics");
 
         this.phy_attack = this.getStrength() +this.getAgility()+this.getIntuition();
-        System.out.println("Phy attack "+phy_attack);
-
+      //  System.out.println("Phy attack "+phy_attack);
         this.mp_perSec = (int) (1+intelligence*0.2);
-        System.out.println("MP per Sec "+mp_perSec);
-
+      //  System.out.println("MP per Sec "+mp_perSec);
         this.hp_perSec = 1+(int)(this.strength*0.02);
-        System.out.println("Hp per Sec "+this.hp_perSec);
-
+     //   System.out.println("Hp per Sec "+this.hp_perSec);
+        this.maxHP = this.vitality*10;
         this.maxMP = intelligence*4;
-        System.out.println("MAX MP "+this.maxMP);
-
+     ///   System.out.println("MAX MP "+this.maxMP);
         this.armor = this.strength*3;
-        System.out.println("Armor "+this.armor);
-
+      //  System.out.println("Armor "+this.armor);
         this.decreasePersen_Crit = (int) (this.strength*0.1);
-        System.out.println("Decrease Persen_Crit "+this.decreasePersen_Crit);
-
+       // System.out.println("Decrease Persen_Crit "+this.decreasePersen_Crit);
         this.decreasePower_Crit = (int) (this.strength*0.8);
-        System.out.println("Decrease Power_Crit "+this.decreasePower_Crit);
-
+      //  System.out.println("Decrease Power_Crit "+this.decreasePower_Crit);
         this.evesion = (int) (5+this.agility*0.7);
-        System.out.println("Evesion "+this.evesion);
-
+      //  System.out.println("Evesion "+this.evesion);
         this.decreaseEnemyEvesion = (int) (this.agility*0.3);
-        System.out.println("Decrease Enemy Evesion "+this.decreaseEnemyEvesion);
-
+     //   System.out.println("Decrease Enemy Evesion "+this.decreaseEnemyEvesion);
         this.armor_penetration = (int) (this.agility);
-        System.out.println("Armor penetration "+this.armor_penetration);
-
-
+      //  System.out.println("Armor penetration "+this.armor_penetration);
         this.chance_criticalPhyAttack = (int) (5+this.intuition*0.4);
-        System.out.println("Chance criticalPhyAttack "+this.chance_criticalPhyAttack);
-
+     //   System.out.println("Chance criticalPhyAttack "+this.chance_criticalPhyAttack);
         this.power_criticalPhyAttack = (int) (this.intuition*2);
-        System.out.println("Power criticalPhyAttack "+this.power_criticalPhyAttack);
-
+      //  System.out.println("Power criticalPhyAttack "+this.power_criticalPhyAttack);
         this.chance_counterattack = (int) (this.intuition*0.3);
-        System.out.println("Chance counterattack "+this.chance_counterattack);
-
+     //   System.out.println("Chance counterattack "+this.chance_counterattack);
         this.chance_parry = (int) (5+this.intuition*0.3);
-        System.out.println("Chance parry "+this.chance_parry);
+      //  System.out.println("Chance parry "+this.chance_parry);
+
+        this.magic_armor = this.strength*2;
+        this.magic_attack = this.wisdom*2;
+        this.chance_criticalMagicAttack = (int) (this.wisdom*0.2);
+        this.power_criticalMagicAttack = 6 + wisdom/10;
+        this.cooldown_speed = this.wisdom*3;
+        this.magic_penetration = (int) (this.wisdom*0.1);
+
 
     }
 
@@ -192,7 +190,7 @@ public class Character implements Comparable, Serializable {
         int enemyEvasion = enemy.getEvesion() - this.decreaseEnemyEvesion;
 
 
-        if (damage<0) damage=0;
+         if (damage<0) damage=0;
          if (critChance<0) critChance =0;
          if (powercrit<1) powercrit=1;
 
@@ -215,6 +213,9 @@ public class Character implements Comparable, Serializable {
                     //Крит прошел
                     damage = damage*powercrit;
                 }
+                if (damage>enemy.getHP())
+                    damage = enemy.getHP();
+
                 enemy.setHP(enemy.getHP()-damage);
 
             }
@@ -533,5 +534,53 @@ public class Character implements Comparable, Serializable {
 
     public void setMP(int MP) {
         this.MP = MP;
+    }
+
+    public int getMagic_armor() {
+        return magic_armor;
+    }
+
+    public void setMagic_armor(int magic_armor) {
+        this.magic_armor = magic_armor;
+    }
+
+    public int getMagic_attack() {
+        return magic_attack;
+    }
+
+    public void setMagic_attack(int magic_attack) {
+        this.magic_attack = magic_attack;
+    }
+
+    public int getChance_criticalMagicAttack() {
+        return chance_criticalMagicAttack;
+    }
+
+    public void setChance_criticalMagicAttack(int chance_criticalMagicAttack) {
+        this.chance_criticalMagicAttack = chance_criticalMagicAttack;
+    }
+
+    public int getPower_criticalMagicAttack() {
+        return power_criticalMagicAttack;
+    }
+
+    public void setPower_criticalMagicAttack(int power_criticalMagicAttack) {
+        this.power_criticalMagicAttack = power_criticalMagicAttack;
+    }
+
+    public int getCooldown_speed() {
+        return cooldown_speed;
+    }
+
+    public void setCooldown_speed(int cooldown_speed) {
+        this.cooldown_speed = cooldown_speed;
+    }
+
+    public int getMagic_penetration() {
+        return magic_penetration;
+    }
+
+    public void setMagic_penetration(int magic_penetration) {
+        this.magic_penetration = magic_penetration;
     }
 }

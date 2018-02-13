@@ -136,14 +136,18 @@ public class ServerWS   {
            //add Bot
            Character character = new Character();
            character.setName("Bot");
+            character.setStrength(3);
+            character.setAgility(3);
+            character.setIntuition(3);
+            character.setWisdom(3);
+
+            character.updatePlayerCharacteristics();
+
             character.setMaxHP(60);
             character.setMaxMP(40);
             character.setMP(40);
             character.setHP(60);
-            character.setStrength(3);
-            character.setAgility(3);
-            character.setIntuition(3);
-            character.updatePlayerCharacteristics();
+
            character.setLvl(login.getCharacter().getLvl());
            characterMap.put(character.getName(), character);
            arena.addToArena(character);
@@ -255,8 +259,7 @@ public class ServerWS   {
                     break;
                 case Reset:
                     int total = 0 ;
-                    total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics()+
-                    +character.getVitality()+character.getIntelligence();
+                    total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics()+character.getVitality()+character.getIntelligence();
                     character.setStrength(0);
                     character.setAgility(0);
                     character.setIntuition(0);
@@ -282,7 +285,7 @@ public class ServerWS   {
         else if (message.getCode() == WsCode.Reset){
 
             int total = 0 ;
-            total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics();
+            total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics()+character.getVitality()+character.getIntelligence();
             character.setStrength(0);
             character.setAgility(0);
             character.setIntuition(0);
