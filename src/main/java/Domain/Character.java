@@ -135,7 +135,7 @@ public class Character implements Comparable, Serializable {
            }
 
     public void updatePlayerCharacteristics(){
-        System.out.println("Updated characteristics");
+     //   System.out.println("Updated characteristics");
 
         this.phy_attack = this.getStrength() +this.getAgility()+this.getIntuition();
       //  System.out.println("Phy attack "+phy_attack);
@@ -254,7 +254,7 @@ public class Character implements Comparable, Serializable {
                 if (getSessionMap().get(this.getName()).isOpen()) {
                     getSessionMap().get(this.getName()).getMessageHandlers().clear();
                    //System.out.println("Игроку " + getName() + " отправленно " + message);
-                   // getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
+//                    getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
                       getSessionMap().get(this.getName()).getBasicRemote().sendText(message);
                 }
             }
@@ -264,11 +264,11 @@ public class Character implements Comparable, Serializable {
             if (getSessionMap().get(this.getName()).isOpen() ){
                 getSessionMap().get(this.getName()).getMessageHandlers().clear();
                 System.out.println("Ошибка отправки cообщения ироку " + name);
-                e.printStackTrace();
             sendMessage(message);
 
         }
             else
+                getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
                e.printStackTrace();
         }
 

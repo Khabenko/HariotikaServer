@@ -17,7 +17,6 @@ public class UpdateDB {
             session.flush();
             session.getTransaction().commit();
 
-
     }
 
     public static int nextLevelEXP(int plauerLVL){

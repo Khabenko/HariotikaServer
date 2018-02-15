@@ -151,6 +151,7 @@ public class ServerWS   {
            character.setLvl(login.getCharacter().getLvl());
            characterMap.put(character.getName(), character);
            arena.addToArena(character);
+
        }
 
         private void cancelRegistrationToBattle(){
@@ -229,76 +230,80 @@ public class ServerWS   {
     }
 
     private void commandCharacteristicCode(HariotikaMessage message){
-         Character character = characterMap.get(message.getCharacter().getName());
+        synchronized (characterMap.get(message.getCharacter().getName())) {
+            Character character = characterMap.get(message.getCharacter().getName());
+            int total = 0;
+            if (character.getPointCharacteristics() > 0) {
+                switch (message.getCode()) {
+                    case Strength:
+                        character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                        character.setStrength(character.getStrength() + 1);
+                        break;
+                    case Agility:
+                        character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                        character.setAgility(character.getAgility() + 1);
+                        break;
+                    case Intuition:
+                        character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                        character.setIntuition(character.getIntuition() + 1);
+                        break;
+                    case Wisdom:
+                        character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                        character.setWisdom(character.getWisdom() + 1);
+                        break;
+                    case Vitality:
+                        character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                        character.setVitality(character.getVitality() + 1);
+                        break;
+                    case Intelligence:
+                        character.setPointCharacteristics(character.getPointCharacteristics() - 1);
+                        character.setIntelligence(character.getIntelligence() + 1);
+                        break;
+                    case Reset:
+                        total = character.getAgility() + character.getStrength() + character.getIntuition() + character.getWisdom() + character.getPointCharacteristics() + character.getVitality() + character.getIntelligence();
+                        character.setStrength(0);
+                        character.setAgility(0);
+                        character.setIntuition(0);
+                        character.setWisdom(0);
+                        character.setVitality(0);
+                        character.setIntelligence(0);
+                        character.setPointCharacteristics(total);
+                        total =0;
+                        characterMap.put(message.getCharacter().getName(), character);
+                        characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+                        UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
+                        hariotikaMessage = new HariotikaMessage(Command.Login, WsCode.Success, character);
+                        character.sendMessage(gson.toJson(hariotikaMessage));
+                        break;
+                    default:
+                        System.out.println("Invalid WsCode " + message.getCode());
+                        break;
 
-        if (character.getPointCharacteristics() >0) {
-            switch (message.getCode()) {
-                case Strength:
-                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
-                    character.setStrength(character.getStrength() + 1);
-                    break;
-                case Agility:
-                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
-                    character.setAgility(character.getAgility() + 1);
-                    break;
-                case Intuition:
-                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
-                    character.setIntuition(character.getIntuition() + 1);
-                    break;
-                case Wisdom:
-                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
-                    character.setWisdom(character.getWisdom() + 1);
-                    break;
-                case Vitality:
-                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
-                    character.setVitality(character.getVitality() + 1);
-                    break;
-                case Intelligence:
-                    character.setPointCharacteristics(character.getPointCharacteristics() - 1);
-                    character.setIntelligence(character.getIntelligence() + 1);
-                    break;
-                case Reset:
-                    int total = 0 ;
-                    total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics()+character.getVitality()+character.getIntelligence();
-                    character.setStrength(0);
-                    character.setAgility(0);
-                    character.setIntuition(0);
-                    character.setWisdom(0);
-                    character.setVitality(0);
-                    character.setIntelligence(0);
-                    character.setPointCharacteristics(total);
+                }
 
-                    characterMap.put(message.getCharacter().getName(),character);
-                    characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
-                    UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
-                    break;
-                default:
-                    System.out.println("Invalid WsCode " + message.getCode());
-                    break;
+                characterMap.put(message.getCharacter().getName(), character);
+                characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+                UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
+                hariotikaMessage = new HariotikaMessage(Command.Login, WsCode.Success, character);
+                character.sendMessage(gson.toJson(hariotikaMessage));
+            } else if (message.getCode() == WsCode.Reset) {
+
+                total = character.getAgility() + character.getStrength() + character.getIntuition() + character.getWisdom() + character.getVitality() + character.getIntelligence() + character.getPointCharacteristics();
+                character.setStrength(0);
+                character.setAgility(0);
+                character.setIntuition(0);
+                character.setWisdom(0);
+                character.setVitality(0);
+                character.setIntelligence(0);
+                character.setPointCharacteristics(total);
+                total =0;
+                characterMap.put(message.getCharacter().getName(), character);
+                characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
+                UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
 
             }
 
-            characterMap.put(message.getCharacter().getName(),character);
-            characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
-            UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
         }
-        else if (message.getCode() == WsCode.Reset){
-
-            int total = 0 ;
-            total = character.getAgility()+character.getStrength()+character.getIntuition()+character.getWisdom()+character.getPointCharacteristics()+character.getVitality()+character.getIntelligence();
-            character.setStrength(0);
-            character.setAgility(0);
-            character.setIntuition(0);
-            character.setWisdom(0);
-            character.setPointCharacteristics(total);
-
-            characterMap.put(message.getCharacter().getName(),character);
-            characterMap.get(message.getCharacter().getName()).updatePlayerCharacteristics();
-            UpdateDB.UpdateDB(characterMap.get(message.getCharacter().getName()));
-
-        }
-
-
     }
 
 

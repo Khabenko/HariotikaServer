@@ -23,12 +23,17 @@ public class Battle {
     long endBattleTime;
     long startBattleTime;
     int round;
+    int player1MissTurn;
+    int player2MissTurn;
+
 
 
     Character winner;
-
     private Character player1;
     private Character player2;
+
+    private int player1EXP;
+    private int player2EXP;
 
 
 
@@ -68,8 +73,9 @@ public class Battle {
         this.player2IsReady =false;
         this.player1Damaged =0;
         this.player2Damaged =0;
+        this.player1MissTurn =0;
+        this.player2MissTurn = 0;
         this.round=1;
-
         this.player1Defance =  new ArrayList<PartOfBody>();
         this.player2Defance = new ArrayList<PartOfBody>();
 
@@ -83,6 +89,7 @@ public class Battle {
         System.out.println("Fight");
 
         if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
+            if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
         {
             player1LogHit = player1.hit(player2);
             player1Damaged+= player1LogHit.getPlayerDamaged();
@@ -94,6 +101,14 @@ public class Battle {
              player1LogHit.setEnemyBlock(true);
              player1LogHit.setHit(getPlayer1Hit());
         }
+
+
+        if (getPlayer1Hit()== null)
+            this.player1MissTurn+=1;
+        if (getPlayer2Hit()== null)
+            this.player2MissTurn+=1;
+
+
 
         if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
         {
@@ -117,9 +132,8 @@ public class Battle {
 
         }
 
-            hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, this);
-
-
+        round+=1;
+        hariotikaMessage = new HariotikaMessage(Command.Battle, WsCode.UpdateBattle, this);
         if (player1.getName()!="Bot")
             player1.sendMessage(gson.toJson(hariotikaMessage));
         if (player2.getName()!="Bot")
@@ -129,7 +143,6 @@ public class Battle {
         player2IsReady =false;
         this.startBattleTime = new Date().getTime()/1000;
         this.endBattleTime = startBattleTime+30;
-        round+=1;
 
     }
 
@@ -140,6 +153,18 @@ public class Battle {
     }
 
     public boolean isFinish(){
+       // System.out.println(player1Hit+" Miss1 "+player1MissTurn+" "+player2Hit+" Miss2 "+player2MissTurn);
+        if (player1MissTurn>=3 && player2MissTurn>=3){
+            winner = null;
+            return true;
+        } else if (player2MissTurn>=3){
+            winner = player1;
+            return true;
+        }else if (player1MissTurn>=3){
+            winner = player2;
+            return true;
+        }
+
         if (player1.getHP()<=0 || player2.getHP()<=0) {
            if (player1.getHP()<=0 && player2.getHP()<=0)
             winner = null;
@@ -167,12 +192,14 @@ public class Battle {
 
             runTimer();
             fightWithBot();
+/*
             try {
                 Thread.sleep(1000);
                 System.out.print("");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+*/
 
             if (isRedy()){
                 fight();
@@ -182,8 +209,6 @@ public class Battle {
             }
 
         }
-
-
 
 
         player1.setInBattle(false);
@@ -352,11 +377,13 @@ public class Battle {
             player.setHP(0);
             exp = playerDamaged/4;
 
+
         }
         player.setExperience(player.getExperience()+exp);
 
         if (player.getExperience() >= player.getExpnextlvl()){
             exp = player.getExperience()-player.getExpnextlvl();
+
             lvl = player.getLvl();
             player.setExperience(exp);
             player.setLvl(lvl+1);
@@ -364,6 +391,10 @@ public class Battle {
             player.setExpnextlvl(nextLevelEXP(player.getLvl()));
         }
 
+       if (player.getName().equals(player1.getName()))
+           player1EXP =exp;
+       else
+           player2EXP =exp;
 
         if (!player.getName().equals("Bot"))
         UpdateDB(player);
@@ -389,13 +420,16 @@ public class Battle {
 
            if (!player1IsReady) {
                player1IsReady = true;
-               player1Hit = VALUES.get(RANDOM.nextInt(SIZE));
-               player1Def = VALUES.get(RANDOM.nextInt(SIZE));
+               if (player1.getName().equals("Bot")) {
+                   player1Hit = VALUES.get(RANDOM.nextInt(SIZE));
+                   player1Def = VALUES.get(RANDOM.nextInt(SIZE));
+               }
            } else if (!player2IsReady){
                player2IsReady = true;
-               player2Hit = VALUES.get(RANDOM.nextInt(SIZE));
-               player2Def = VALUES.get(RANDOM.nextInt(SIZE));
-
+               if (player2.getName().equals("Bot")) {
+                   player2Hit = VALUES.get(RANDOM.nextInt(SIZE));
+                   player2Def = VALUES.get(RANDOM.nextInt(SIZE));
+               }
            }
 
 
