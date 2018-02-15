@@ -16,14 +16,14 @@ public class GlobalUpdate extends Thread {
     private Character character;
     private Gson gson;
   //  private int regenerationMP = 1;
-  private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+ // private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
 
     public GlobalUpdate() {
         this.start();
         character = new Character();
         gson = new Gson();
-
+/*
         scheduler.scheduleAtFixedRate(new Thread(){
             public void run(){
              //   System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
@@ -52,15 +52,15 @@ public class GlobalUpdate extends Thread {
             }
         }, 1, 1, TimeUnit.SECONDS);
 
-
+*/
     }
 
     @Override
     public void run() {
      while (true) {
          try {
-       //    Thread.sleep(1000);
-/*
+           Thread.sleep(1000);
+
              //HP regeneration
          for (HashMap.Entry<String, Character> pair : ServerWS.getCharacterMap().entrySet()) {
              character = ServerWS.getCharacterMap().get(pair.getKey() );
@@ -87,7 +87,7 @@ public class GlobalUpdate extends Thread {
                  //Удаляем сесию, если она закрыта
              }
 
-         }*/
+         }
          } catch (Exception e) {
              e.printStackTrace();
         }

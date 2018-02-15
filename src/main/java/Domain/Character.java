@@ -253,7 +253,7 @@ public class Character implements Comparable, Serializable {
             synchronized (getSessionMap().get(this.getName())) {
                 if (getSessionMap().get(this.getName()).isOpen()) {
                     getSessionMap().get(this.getName()).getMessageHandlers().clear();
-                   //System.out.println("Игроку " + getName() + " отправленно " + message);
+                   System.out.println("Игроку " + getName() + " отправленно " + message);
 //                    getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
                       getSessionMap().get(this.getName()).getBasicRemote().sendText(message);
                 }

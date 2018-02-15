@@ -192,14 +192,14 @@ public class Battle {
 
             runTimer();
             fightWithBot();
-/*
+
             try {
                 Thread.sleep(1000);
                 System.out.print("");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-*/
+
 
             if (isRedy()){
                 fight();
