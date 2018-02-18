@@ -162,7 +162,7 @@ public class Character implements Comparable, Serializable {
      //   System.out.println("Chance criticalPhyAttack "+this.chance_criticalPhyAttack);
         this.power_criticalPhyAttack = (int) (this.intuition*2);
       //  System.out.println("Power criticalPhyAttack "+this.power_criticalPhyAttack);
-        this.chance_counterattack = (int) (this.intuition*0.3);
+        this.chance_counterattack = (int) (5+this.intuition*0.3);
      //   System.out.println("Chance counterattack "+this.chance_counterattack);
         this.chance_parry = (int) (5+this.intuition*0.3);
       //  System.out.println("Chance parry "+this.chance_parry);
@@ -204,6 +204,7 @@ public class Character implements Comparable, Serializable {
         roundLogs.setEnemyParry(enemyParry);
         roundLogs.setPlayerCritkal(critacalHit);
         roundLogs.setPlayerCounterattack(counterattack);
+        System.out.println("Countеrattack "+counterattack);
 
 
 
@@ -212,11 +213,14 @@ public class Character implements Comparable, Serializable {
                 if (critacalHit){
                     //Крит прошел
                     damage = damage*powercrit;
+                    System.out.println("Critickal damage "+damage);
                 }
                 if (damage>enemy.getHP())
                     damage = enemy.getHP();
 
+
                 enemy.setHP(enemy.getHP()-damage);
+                System.out.println("Damage "+damage);
 
             }
             else {
@@ -253,7 +257,7 @@ public class Character implements Comparable, Serializable {
             synchronized (getSessionMap().get(this.getName())) {
                 if (getSessionMap().get(this.getName()).isOpen()) {
                     getSessionMap().get(this.getName()).getMessageHandlers().clear();
-                   System.out.println("Игроку " + getName() + " отправленно " + message);
+               //    System.out.println("Игроку " + getName() + " отправленно " + message);
 //                    getSessionMap().get(this.getName()).getAsyncRemote().sendText(message);
                       getSessionMap().get(this.getName()).getBasicRemote().sendText(message);
                 }

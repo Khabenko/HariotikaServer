@@ -88,19 +88,26 @@ public class Battle {
         Gson  gson = new Gson();
         System.out.println("Fight");
 
-        if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
-            if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
-        {
-            player1LogHit = player1.hit(player2);
-            player1Damaged+= player1LogHit.getPlayerDamaged();
-            player1LogHit.setHit(getPlayer1Hit());
-            System.out.println("HP player 1 "+player1.getHP());
+
+        System.out.println(player1Hit);
+        System.out.println(player2Hit);
+        turnPlayer1();
+        turnPlayer2();
+
+
+        if (player1LogHit!=null && player1LogHit.isPlayerCounterattack()){
+            player1Defance.add(randomPartOfBody());
+            turnPlayer1();
+
         }
-        else {
-             this.player1LogHit = new RoundLogs();
-             player1LogHit.setEnemyBlock(true);
-             player1LogHit.setHit(getPlayer1Hit());
+
+
+        if (player2LogHit!=null && player2LogHit.isPlayerCounterattack()){
+            player2Defance.add(randomPartOfBody());
+            turnPlayer2();
         }
+
+
 
 
         if (getPlayer1Hit()== null)
@@ -109,21 +116,6 @@ public class Battle {
             this.player2MissTurn+=1;
 
 
-
-        if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
-        {
-            player2LogHit = player2.hit(player1);
-            player2Damaged+= player2LogHit.getPlayerDamaged();
-            player2LogHit.setHit(getPlayer2Hit());
-            System.out.println("HP player 2 "+player2.getHP());
-
-        }else {
-            this.player2LogHit = new RoundLogs();
-            player2LogHit.setEnemyBlock(true);
-            player2LogHit.setHit(getPlayer2Hit());
-        }
-
-       /// System.out.println(gson.toJson(this));
 
         if (isFinish()) {
             finished = true;
@@ -400,8 +392,43 @@ public class Battle {
         UpdateDB(player);
    }
 
+    public void turnPlayer1(){
+            if (getPlayer1Hit()!= null && !(player2Defance.contains(getPlayer1Hit())))
+            {
+                player1LogHit = player1.hit(player2);
+                player1Damaged+= player1LogHit.getPlayerDamaged();
+                player1LogHit.setHit(getPlayer1Hit());
+            }
+            else {
+                this.player1LogHit = new RoundLogs();
+                player1LogHit.setEnemyBlock(true);
+                player1LogHit.setHit(getPlayer1Hit());
+            }
+    }
 
-   public void runTimer(){
+
+    public void turnPlayer2(){
+        if (getPlayer2Hit()!= null && !(player1Defance.contains(getPlayer2Hit())))
+        {
+            player2LogHit = player2.hit(player1);
+            player2Damaged+= player2LogHit.getPlayerDamaged();
+            player2LogHit.setHit(getPlayer2Hit());
+
+        }else {
+            this.player2LogHit = new RoundLogs();
+            player2LogHit.setEnemyBlock(true);
+            player2LogHit.setHit(getPlayer2Hit());
+        }
+
+    }
+
+
+
+
+
+
+
+    public void runTimer(){
          Date currentTime = new Date();
      //  player1.sendMessage("Timer#"+timer);
     //   player2.sendMessage("Timer#"+timer);

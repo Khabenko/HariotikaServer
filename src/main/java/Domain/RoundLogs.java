@@ -73,4 +73,5 @@ public class RoundLogs{
     public void setHit(PartOfBody hit) {
         this.hit = hit;
     }
+
 }
