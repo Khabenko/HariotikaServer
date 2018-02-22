@@ -146,11 +146,11 @@ public class Character implements Comparable, Serializable {
         this.maxHP = this.vitality*10;
         this.maxMP = intelligence*4;
      ///   System.out.println("MAX MP "+this.maxMP);
-        this.armor = this.strength*3;
+        this.armor = this.strength*2;
       //  System.out.println("Armor "+this.armor);
-        this.decreasePersen_Crit = (int) (this.strength*0.1);
+        this.decreasePersen_Crit = (int) (this.strength*0.5);
        // System.out.println("Decrease Persen_Crit "+this.decreasePersen_Crit);
-        this.decreasePower_Crit = (int) (this.strength*0.8);
+        this.decreasePower_Crit = (int) (this.strength*1);
       //  System.out.println("Decrease Power_Crit "+this.decreasePower_Crit);
         this.evesion = (int) (5+this.agility*0.7);
       //  System.out.println("Evesion "+this.evesion);
@@ -158,9 +158,9 @@ public class Character implements Comparable, Serializable {
      //   System.out.println("Decrease Enemy Evesion "+this.decreaseEnemyEvesion);
         this.armor_penetration = (int) (this.agility);
       //  System.out.println("Armor penetration "+this.armor_penetration);
-        this.chance_criticalPhyAttack = (int) (5+this.intuition*0.4);
+        this.chance_criticalPhyAttack = (int) (5+this.intuition*0.5);
      //   System.out.println("Chance criticalPhyAttack "+this.chance_criticalPhyAttack);
-        this.power_criticalPhyAttack = (int) (this.intuition*2);
+        this.power_criticalPhyAttack = (int) (this.intuition*1);
       //  System.out.println("Power criticalPhyAttack "+this.power_criticalPhyAttack);
         this.chance_counterattack = (int) (5+this.intuition*0.3);
      //   System.out.println("Chance counterattack "+this.chance_counterattack);
